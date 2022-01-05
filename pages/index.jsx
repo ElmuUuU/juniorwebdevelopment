@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -9,11 +10,11 @@ export default function Home() {
         <title>Junior Web Development</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Test</h1>
+      <main className="max-w-7xl">
+        <h1 className={styles.title}>Start game</h1>
       </main>
 
-      <footer>Footer</footer>
+      <Footer />
     </div>
   );
 }
