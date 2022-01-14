@@ -1,16 +1,33 @@
 import { useRouter } from "next/dist/client/router";
+import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
   const router = useRouter();
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
-      <div
-        onClick={() => router.push("/")}
-        className="relative flex items-center h-10 cursor-pointer my-auto"
-      >
-        <button>Hallo</button>
+    <div className="sticky top-0 z-50 items-center justify-center">
+      <div className="bg-white px-1 md:px-4 max-w-7xl mx-auto">
+        <div className="flex items-center p-6 border-b-2 border-gray-600 justify-start md:space-x-10">
+          <div className="flex w-1/2 md:space-x-10 ">
+            <div className="items-center text-center justify-center">
+              <Link href="/" passHref>
+                <Image
+                  className="hidden cursor-pointer"
+                  layout="fixed"
+                  src="/logo.jpg"
+                  alt="Game Logo"
+                  width="60"
+                  height="40"
+                />
+              </Link>
+            </div>
+            <p className="hidden items-center justify-center text-base font-medium md:block lg:pt-4">
+              Game
+            </p>
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
   );
 }
 
