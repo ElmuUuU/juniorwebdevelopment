@@ -7,9 +7,6 @@ import Hero from "../components/Hero";
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Junior Web Development</title>
-      </Head>
       <Image
         className="w-full h-screen"
         src="/background.jpeg"
@@ -17,7 +14,11 @@ export default function Home() {
         layout="fill"
         objectFit="cover"
       />
-      <Header />
+      <Head>
+        <title>Junior Web Development</title>
+      </Head>
+
+      <Header className="z-50" />
       <Hero />
       <Footer />
     </div>
