@@ -7,8 +7,8 @@ function Header() {
   return (
     <div className="sticky top-0 z-50 items-center justify-center">
       <div className="bg-white px-1 md:px-4 max-w-7xl mx-auto">
-        <div className="flex items-center p-6 border-b-2 border-gray-600 justify-start md:space-x-10">
-          <div className="flex w-1/2 md:space-x-10 ">
+        <div className="flex items-center p-6 border-b-2 border-gray-600 justify-center md:space-x-10">
+          <div className="flex w-1/2 md:space-x-10">
             <div className="items-center text-center justify-center">
               <Link href="/" passHref>
                 <Image
@@ -21,9 +21,9 @@ function Header() {
                 />
               </Link>
             </div>
-            <p className="hidden items-center justify-center text-base font-medium md:block lg:pt-4">
-              Game
-            </p>
+          </div>
+          <div className="flex w-1/2 md:px-4">
+            <p className="flex items-center text-center justify-center">Game</p>
           </div>
         </div>
       </div>
