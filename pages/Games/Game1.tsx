@@ -13,12 +13,12 @@ function Games() {
     ["3b", "test3"],
     ["3c", "test4"],
     ["4a", "test5"],
+    ["4b", "test3"],
+    ["4c", "test4"],
   ]);
-
   var randomMap = Math.round(Math.random() * (5 - 1) + 1);
   var mapVariation = "";
   var solutionString;
-
   var randomString = Math.round(Math.random() * (3 - 1) + 1);
   switch (randomString) {
     case 1: {
@@ -34,16 +34,17 @@ function Games() {
       break;
     }
   }
-
-  const mapSelection = `/public/${mapVariation}.png`;
-
+  {
+    /* Save to environment Variable */
+  }
+  const mapSelection = `/public/maps/m${mapVariation}.png`;
   solutionString = solutionsMap.get(mapVariation)!;
 
   return (
     <div className="flex flex-col items-center justify-center w-full px-20 text-center">
-      <p>Use Image No. {mapVariation}</p>
+      <p>Use Image No. {mapSelection}</p>
       <Image
-        src={mapSelection}
+        src="/images/maps/m1a.png"
         alt=""
         width="640px"
         height="360px"
