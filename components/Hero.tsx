@@ -6,8 +6,9 @@ let random = Math.round(Math.random() * 3 + 1);
 
 function Hero() {
   var randomGame = Math.round(Math.random() * (3 - 1) + 1);
-  randomGame = 1;
-  let game = `/Games/Game${randomGame}`;
+  var game = process.env.GAME_ID;
+  game = `/Games/Game${randomGame}`;
+  game = "/Games/Game1";
 
   return (
     <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">

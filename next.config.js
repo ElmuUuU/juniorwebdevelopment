@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    GREETING: process.env.GREETING,
+    GAME_ID: process.env.CONTENTFUL_SPACE_ID,
   },
 };

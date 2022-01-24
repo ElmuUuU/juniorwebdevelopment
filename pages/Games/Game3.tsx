@@ -18,8 +18,6 @@ function Gamethure() {
   var selectedRuneArray = new Array();
   selectedRuneArray = Arrays[randomRuneArray];
 
-  
-
   return <div>{selectedRuneArray}</div>;
 }
 export default Gamethure;

@@ -2,19 +2,27 @@ import Image from "next/image";
 import React from "react";
 
 function Games() {
+  var randomGame = Math.round(Math.random() * (3 - 1) + 1);
+  var game = process.env.GAME_ID;
+
+  game = `/Games/Game${randomGame}`;
+
   let solutionsMap = new Map<string, string>([
     ["1a", "test1"],
     ["1b", "test2"],
     ["1c", "test3"],
     ["2a", "test4"],
     ["2b", "test5"],
-    ["2c", "test1"],
-    ["3a", "test2"],
-    ["3b", "test3"],
-    ["3c", "test4"],
-    ["4a", "test5"],
-    ["4b", "test3"],
-    ["4c", "test4"],
+    ["2c", "test6"],
+    ["3a", "test7"],
+    ["3b", "test8"],
+    ["3c", "test9"],
+    ["4a", "test10"],
+    ["4b", "test11"],
+    ["4c", "test12"],
+    ["5a", "test13"],
+    ["5b", "test14"],
+    ["5c", "test15"],
   ]);
   var randomMap = Math.round(Math.random() * (5 - 1) + 1);
   var mapVariation = "";
@@ -37,14 +45,24 @@ function Games() {
   {
     /* Save to environment Variable */
   }
-  const mapSelection = `/public/maps/m${mapVariation}.png`;
+  const mapSelection = `/m${mapVariation}.png`;
   solutionString = solutionsMap.get(mapVariation)!;
+  var previousGame = parseInt(process.env.PREVIOUS_GAME!);
+
+  function getRandomGame() {
+    if ((previousGame = 0)) {
+      randomString = Math.round(Math.random() * (3 - 2) + 2);
+      previousGame = 1;
+      game = `/Games/Game${randomString}`;
+    }
+    return game;
+  }
 
   return (
     <div className="flex flex-col items-center justify-center w-full px-20 text-center">
       <p>Use Image No. {mapSelection}</p>
       <Image
-        src="/images/maps/m1a.png"
+        src={mapSelection}
         alt=""
         width="640px"
         height="360px"
@@ -62,7 +80,7 @@ function Games() {
           required
           placeholder="Put the place you think"
         />
-        <button type="submit">Next Game</button>
+        <a href={getRandomGame()}>Next Game</a>
       </form>
     </div>
   );
