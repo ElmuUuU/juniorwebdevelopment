@@ -59,16 +59,17 @@ function Games() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full px-20 text-center">
-      <p>Use Image No. {mapSelection}</p>
+    <div className="flex flex-col items-center justify-center w-full px-20 text-center pt-20">
+      <p className="pb-4">Use Image No. {mapSelection}</p>
       <Image
         src={mapSelection}
         alt=""
         width="640px"
         height="360px"
         layout="fixed"
+        className="pt-4"
       />
-      <form className="flex" method="POST">
+      <form className="flex pt-4" method="POST">
         <label htmlFor="name" className="mt-4">
           Destination
         </label>
@@ -80,7 +81,12 @@ function Games() {
           required
           placeholder="Put the place you think"
         />
-        <a href={getRandomGame()}>Next Game</a>
+        <a
+          href={getRandomGame()}
+          className="cursor-pointer mt-2 font bold border-2 rounded-2xl pt-2 px-1 bg-yellow-300"
+        >
+          Next Game
+        </a>
       </form>
     </div>
   );
