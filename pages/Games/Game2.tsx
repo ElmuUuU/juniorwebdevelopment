@@ -4,6 +4,7 @@ Finish initGame function ( Create html to draw game )
 reduce lives global variable
 win condition (key to lock)
 Add more Playing field variations
+Add random playing field selector
 
 */
 
@@ -44,7 +45,7 @@ function Gamenick() {
   //  Banana: 20
   //  EiffelTower: 30
   //
-  
+
 
   function addWall(col: number, row: number) {
     cell[col][row] = 10;
