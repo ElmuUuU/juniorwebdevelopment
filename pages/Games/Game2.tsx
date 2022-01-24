@@ -15,7 +15,7 @@ function Gamenick() {
     }
     return game;
   }
-  return <div></div>;
+  return <div>Test</div>;
 }
 
 export default Gamenick;

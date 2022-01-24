@@ -1,6 +1,6 @@
 import React from "react";
 
-function Gamethure() {
+function Game3() {
   var randomRuneArray = Math.round(Math.random() * (10 - 1));
 
   var Arrays = new Array();
@@ -20,4 +20,4 @@ function Gamethure() {
 
   return <div>{selectedRuneArray}</div>;
 }
-export default Gamethure;
+export default Game3;
