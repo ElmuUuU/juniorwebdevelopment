@@ -30,6 +30,7 @@ function Gamenick() {
   var playerY: number;
   var playerX: number;
   var holdTyle = 0;
+  var hasKey = false;
 
   setupGame();
   initGame();
@@ -125,6 +126,14 @@ function Gamenick() {
     generateLock();
     generatePlayer();
   }
+  function victoryConditionCheck() {
+      if (holdTyle== 5) {
+        hasKey=true;
+      }
+      if (hasKey==true && holdTyle==6) {
+          // game is won
+      }
+  }
   function moveX(direction: number) {
     //collisions with outer walls shall be ignored
     if (playerX + direction > 7 || playerX + direction < 0) {
@@ -136,6 +145,7 @@ function Gamenick() {
         playerX += direction;
         holdTyle = cell[playerY][playerX];
         cell[playerY][playerX] = 1;
+        victoryConditionCheck();
         initGame();
       }
     }
@@ -151,12 +161,12 @@ function Gamenick() {
         playerY += direction;
         holdTyle = cell[playerY][playerX];
         cell[playerY][playerX] = 1;
+        victoryConditionCheck();
         initGame();
       }
     }
   }
 
+  
   return <div>Test</div>;
 }
-
-export default Gamenick;
