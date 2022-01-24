@@ -2,7 +2,6 @@
 
 Finish initGame function ( Create html to draw game )
 reduce lives global variable
-win condition (key to lock)
 Add more Playing field variations
 Add random playing field selector
 
@@ -170,3 +169,5 @@ function Gamenick() {
   
   return <div>Test</div>;
 }
+
+export default Gamenick;
