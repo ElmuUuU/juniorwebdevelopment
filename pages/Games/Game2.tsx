@@ -24,7 +24,7 @@ function Gamenick() {
     return game;
   }
 
-  var cell: number[][];
+  var cell: number[][] = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];
   var playerY: number;
   var playerX: number;
   var holdTyle = 0;
@@ -95,13 +95,6 @@ function Gamenick() {
   }
 
   function setupGame() {
-    //fill whole array with 0
-
-    for (let i = 0; i < 6; i++) {
-      for (let u = 0; u < 6; u++) {
-        cell[i][u] = 0;
-      }
-    }
 
     // randomly select one set up, and set game accordingly
     var x = Math.floor(Math.random() * 8 + 1) - 1;;
