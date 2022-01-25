@@ -2,8 +2,7 @@
 
 Finish initGame function ( Create html to draw game )
 reduce lives global variable
-Add more Playing field variations
-Add random playing field selector
+determine what happens when game is won
 
 */
 
