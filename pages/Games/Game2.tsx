@@ -104,8 +104,8 @@ function Gamenick() {
       }
     }
 
-    // randomly select one before that. Case 1 represents the first setup on the PowerPoint, I defaulted it to 1; different set-ups have to be added
-    var x = 1;
+    // randomly select one set up, and set game accordingly
+    var x = Math.floor(Math.random() * 8 + 1) - 1;;
     switch (x) {
       case 1: {
         addWall(0, 1);
@@ -121,8 +121,107 @@ function Gamenick() {
         addEiffelTower(4, 2);
         break;
       }
+      case 2: {
+        addWall(0, 1);
+        addWall(2, 1);
+        addWall(2, 3);
+        addWall(2, 5);
+        addWall(5, 0);
+        addWall(5, 2);
+        addWall(5, 4);
+        addWall(3, 2);
+        addWall(1, 4);
+        addBanana(0, 6);
+        addEiffelTower(4, 2);
+        break;
+      }
+      case 3: {
+        addWall(1, 0);
+        addWall(1, 2);
+        addWall(4, 1);
+        addWall(6, 1);
+        addWall(0, 5);
+        addWall(2, 5);
+        addWall(3, 4);
+        addWall(5, 4);
+        addWall(5, 6);
+        addBanana(0, 2);
+        addEiffelTower(4, 6);
+        break;
+      }
+      case 4: {
+        addWall(1, 0);
+        addWall(1, 2);
+        addWall(1, 6);
+        addWall(3, 0);
+        addWall(5, 2);
+        addWall(2, 3);
+        addWall(4, 3);
+        addWall(2, 5);
+        addWall(6, 5);
+        addBanana(0, 2);
+        addEiffelTower(4, 6);
+        break;
+      }
+      case 5: {
+        addWall(1, 0);
+        addWall(3, 0);
+        addWall(5, 0);
+        addWall(1, 2);
+        addWall(3, 4);
+        addWall(6, 3);
+        addWall(6, 5);
+        addWall(0, 5);
+        addWall(2, 5);
+        addBanana(0, 0);
+        addEiffelTower(4, 4);
+        break;
+      }
+      case 6: {
+        addWall(0, 1);
+        addWall(3, 0);
+        addWall(5, 0);
+        addWall(0, 5);
+        addWall(5, 2);
+        addWall(4, 3);
+        addWall(5, 6);
+        addWall(1, 4);
+        addWall(2, 5);
+        addBanana(2, 0);
+        addEiffelTower(4, 2);
+        break;
+      }
+      case 7: {
+        addWall(0, 1);
+        addWall(3, 0);
+        addWall(5, 0);
+        addWall(0, 3);
+        addWall(0, 5);
+        addWall(2, 3);
+        addWall(4, 3);
+        addWall(3, 6);
+        addWall(5, 6);
+        addBanana(2, 2);
+        addEiffelTower(2, 6);
+        break;
+      }
+      case 8: {
+        addWall(1, 0);
+        addWall(3, 0);
+        addWall(4, 1);
+        addWall(0, 3);
+        addWall(0, 5);
+        addWall(2, 3);
+        addWall(2, 5);
+        addWall(5, 4);
+        addWall(6, 5);
+        addBanana(6, 4);
+        addEiffelTower(0, 4);
+        break;
+      }
     }
     generateLock();
+    generateKey();
     generatePlayer();
   }
   function victoryConditionCheck() {
