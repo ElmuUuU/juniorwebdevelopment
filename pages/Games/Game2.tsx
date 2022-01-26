@@ -33,7 +33,6 @@ function Gamenick() {
 
   setupGame();
   initGame();
-  moveY(2);
 
   //Generate Playing field
   //  
