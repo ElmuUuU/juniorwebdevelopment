@@ -43,9 +43,7 @@ function Games() {
       break;
     }
   }
-  {
-    /* Save to environment Variable */
-  }
+
   const mapSelection = `/m${mapVariation}.png`;
   solutionString = solutionsMap.get(mapVariation)!;
   var previousGame = process.env.PREVIOUS_GAME;
