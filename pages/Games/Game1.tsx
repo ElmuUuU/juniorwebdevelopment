@@ -50,6 +50,12 @@ function Games() {
   solutionString = solutionsMap.get(mapVariation)!;
   var previousGame = process.env.PREVIOUS_GAME;
 
+  function checkForm() {
+    {
+      /*if gleich, weiter, else -1Leben */
+    }
+  }
+
   function getRandomGame() {
     if ((previousGame = "0")) {
       randomString = Math.round(Math.random() * (3 - 2) + 2);
