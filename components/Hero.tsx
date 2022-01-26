@@ -19,6 +19,11 @@ function Hero() {
           Start the game
         </p>
       </Link>
+      <Link href="/Solutions">
+        <p className="mt-10 text-2xl font bold border-2 rounded-2xl p-2 bg-yellow-300 cursor-pointer">
+          Coach
+        </p>
+      </Link>
     </div>
   );
 }
