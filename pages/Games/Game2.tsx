@@ -24,7 +24,15 @@ function Gamenick() {
     return game;
   }
 
-  var cell: number[][] = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];
+  var cell: number[][] = [
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+  ];
   var playerY: number;
   var playerX: number;
   var holdTyle = 0;
@@ -35,7 +43,7 @@ function Gamenick() {
   initGame();
 
   //Generate Playing field
-  //  
+  //
   //  EmptySquare: 0
   //  Player: 1
   //  Key: 5
@@ -44,7 +52,6 @@ function Gamenick() {
   //  Banana: 20
   //  EiffelTower: 30
   //
-
 
   function addWall(col: number, row: number) {
     cell[col][row] = 10;
@@ -95,10 +102,9 @@ function Gamenick() {
   }
 
   function setupGame() {
-
     // randomly select one set up, and set game accordingly
     var x = Math.floor(Math.random() * 8 + 1) - 1;
-    whichGame=x;
+    whichGame = x;
     switch (x) {
       case 1: {
         addWall(0, 1);
@@ -218,12 +224,12 @@ function Gamenick() {
     generatePlayer();
   }
   function victoryConditionCheck() {
-      if (holdTyle== 5) {
-        hasKey=true;
-      }
-      if (hasKey==true && holdTyle==6) {
-          // game is won
-      }
+    if (holdTyle == 5) {
+      hasKey = true;
+    }
+    if (hasKey == true && holdTyle == 6) {
+      // game is won
+    }
   }
   function moveX(direction: number) {
     //collisions with outer walls shall be ignored
@@ -258,8 +264,11 @@ function Gamenick() {
     }
   }
 
-  
-return <div>{whichGame} + {cell}</div>;
+  return (
+    <div>
+      {whichGame} + {cell}
+    </div>
+  );
 }
 
 export default Gamenick;

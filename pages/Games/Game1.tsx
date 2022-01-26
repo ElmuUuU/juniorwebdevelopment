@@ -24,7 +24,7 @@ function Games() {
     ["5b", "test14"],
     ["5c", "test15"],
   ]);
-  
+
   var randomMap = Math.round(Math.random() * (5 - 1) + 1);
   var mapVariation = "";
   var solutionString;
@@ -48,12 +48,12 @@ function Games() {
   }
   const mapSelection = `/m${mapVariation}.png`;
   solutionString = solutionsMap.get(mapVariation)!;
-  var previousGame = parseInt(process.env.PREVIOUS_GAME!);
+  var previousGame = process.env.PREVIOUS_GAME;
 
   function getRandomGame() {
-    if ((previousGame = 0)) {
+    if ((previousGame = "0")) {
       randomString = Math.round(Math.random() * (3 - 2) + 2);
-      previousGame = 1;
+      previousGame = "1";
       game = `/Games/Game${randomString}`;
     }
     return game;

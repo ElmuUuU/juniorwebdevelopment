@@ -9,6 +9,8 @@ function Hero() {
   var game = process.env.GAME_ID;
   game = `/Games/Game${randomGame}`;
   game = "/Games/Game1";
+  var lives = parseInt(process.env.LIVES!);
+  lives = 3;
 
   return (
     <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
