@@ -4,7 +4,7 @@ function Game3() {
   var array: number[] = [];
 
   var randomRuneArray = Math.round(Math.random() * (10 - 1));
-  randomRuneArray = 0;
+  
   var Arrays = new Array();
   Arrays[0] = new Array(4, 7, 8, 3, 10, 5, 11, 13, 2);
   Arrays[1] = new Array(11, 3, 13, 9, 14, 4, 6, 8, 15);
