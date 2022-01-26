@@ -1,7 +1,7 @@
 import React from "react";
 
 function Game3() {
-  var array: number[];
+  var array: number[] = [];
 
   var randomRuneArray = Math.round(Math.random() * (10 - 1));
   randomRuneArray = 0;

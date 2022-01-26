@@ -24,11 +24,12 @@ function Gamenick() {
     return game;
   }
 
-  var cell: number[][] = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];
+  var cell: number[][] = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]];
   var playerY: number;
   var playerX: number;
   var holdTyle = 0;
   var hasKey = false;
+  var whichGame: number = 0;
 
   setupGame();
   initGame();
@@ -97,7 +98,8 @@ function Gamenick() {
   function setupGame() {
 
     // randomly select one set up, and set game accordingly
-    var x = Math.floor(Math.random() * 8 + 1) - 1;;
+    var x = Math.floor(Math.random() * 8 + 1) - 1;
+    whichGame=x;
     switch (x) {
       case 1: {
         addWall(0, 1);
@@ -258,7 +260,7 @@ function Gamenick() {
   }
 
   
-  return <div>Test</div>;
+return <div>{whichGame} + {cell}</div>;
 }
 
 export default Gamenick;
