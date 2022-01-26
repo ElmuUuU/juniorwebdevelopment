@@ -24,6 +24,7 @@ function Games() {
     ["5b", "test14"],
     ["5c", "test15"],
   ]);
+  
   var randomMap = Math.round(Math.random() * (5 - 1) + 1);
   var mapVariation = "";
   var solutionString;
