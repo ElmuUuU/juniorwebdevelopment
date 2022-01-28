@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
+
 function Hero() {
   var randomGame = Math.round(Math.random() * (3 - 1) + 1);
   var game = process.env.GAME_ID;

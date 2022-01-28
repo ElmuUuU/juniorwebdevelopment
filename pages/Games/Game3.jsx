@@ -126,4 +126,5 @@ function Game3() {
     </div>
   );
 }
+
 export default Game3;

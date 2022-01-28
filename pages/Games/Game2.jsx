@@ -1,11 +1,3 @@
-/* TODO
-
-Finish initGame function ( Create html to draw game )
-reduce lives global variable
-determine what happens when game is won
-
-*/
-
 import React from "react";
 
 function Gamenick() {

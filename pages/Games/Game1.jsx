@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function Games() {
+function Game1() {
   var randomGame = Math.round(Math.random() * (3 - 1) + 1);
   var game = process.env.GAME_ID;
   game = "/Games/Game" + randomGame;
@@ -89,4 +89,4 @@ function Games() {
     </div>
   );
 }
-exports.default = Games;
+export default Game1;
