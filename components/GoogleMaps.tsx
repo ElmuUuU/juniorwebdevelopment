@@ -1,28 +1,46 @@
 import React from "react";
-import {
-  GoogleMap,
-  useLoadScript,
-  Marker,
-  InfoWindow,
-} from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
-let map: google.maps.Map;
-const center: google.maps.LatLngLiteral = { lat: 30, lng: -110 };
+const containerStyle = {
+  width: "600px",
+  height: "600px",
+};
 
-function initMap(): void {
-  map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-    center,
-    zoom: 8,
-  });
-}
+const center = {
+  lat: -3.745,
+  lng: -38.523,
+};
 
 function GoogleMaps() {
-  return (
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyCXO3QMSRjSC5Pmz3nJKoHGzJaYh6cZl7M",
+  });
+
+  const [map, setMap] = React.useState(null);
+
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds();
+    map.fitBounds(bounds);
+    setMap(map);
+  }, []);
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+
+  return isLoaded ? (
     <GoogleMap
-      mapContainerStyle={mapContainerStyle}
-      zoom={8}
+      mapContainerStyle={containerStyle}
       center={center}
-    ></GoogleMap>
+      zoom={10}
+      onLoad={onLoad}
+      onUnmount={onUnmount}
+    >
+      {/* Child components, such as markers, info windows, etc. */}
+      <></>
+    </GoogleMap>
+  ) : (
+    <></>
   );
 }
 
