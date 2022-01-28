@@ -253,6 +253,13 @@ function Gamenick() {
       {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
       {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
       {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
+      <div className="">Pfeil nach oben</div>
+      <div className="flex flex-col-3">
+        <div>Pfeil nach links</div>
+        <div>Spielfeld</div>
+        <div>Pfeil nach rechts</div>
+      </div>
+      <div className="">Pfeil nach unten</div>
     </div>
   );
 }

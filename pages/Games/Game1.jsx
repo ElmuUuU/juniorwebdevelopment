@@ -56,8 +56,9 @@ function Game1() {
     }
     return game;
   }
+
   return (
-    <div className="flex flex-col items-center justify-center w-full px-20 text-center pt-20">
+    <div className="flex flex-col mx-auto items-center justify-center w-full px-20 text-center pt-20">
       <p className="pb-4">Use Image No. {mapSelection}</p>
       <Image
         src={mapSelection}
