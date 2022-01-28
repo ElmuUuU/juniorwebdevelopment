@@ -85,7 +85,7 @@ function Gamenick() {
   }
   function setupGame() {
     // randomly select one set up, and set game accordingly
-    var x = Math.floor(Math.random() * 8 + 1) - 1;
+    var x = Math.floor(Math.random() * 8 + 1);
     whichGame = x;
     switch (x) {
       case 1: {
@@ -249,6 +249,10 @@ function Gamenick() {
   return (
     <div>
       {whichGame} + {cell}
+      {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
+      {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
+      {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
+      {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
     </div>
   );
 }
