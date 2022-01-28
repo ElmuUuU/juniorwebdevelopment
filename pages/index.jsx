@@ -7,7 +7,7 @@ import React from 'react';
 
 function index() {
   return <div className={styles.container}>
-  <main className={styles.main}>
+  <main >
   <Hero />
   </main>
   </div>;
