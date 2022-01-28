@@ -2,8 +2,6 @@ import { randomInt } from "crypto";
 import Link from "next/link";
 import React from "react";
 
-let random = Math.round(Math.random() * 3 + 1);
-
 function Hero() {
   var randomGame = Math.round(Math.random() * (3 - 1) + 1);
   var game = process.env.GAME_ID;
