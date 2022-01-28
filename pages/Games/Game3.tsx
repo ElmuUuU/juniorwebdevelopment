@@ -23,7 +23,7 @@ function Game3() {
   for (var i = 0; i < selectedRuneArray.length; i++) {
     sortedArray.push(selectedRuneArray[i]);
   }
-  shuffle(sortedArray);
+  sortedArray.sort((n1, n2) => n1 - n2);
 
   var button1number = sortedArray[0];
   var button2number = sortedArray[1];
@@ -35,68 +35,67 @@ function Game3() {
   var button8number = sortedArray[7];
   var button9number = sortedArray[8];
 
-  var isActive1 = true;
-  var isActive2 = true;
-  var isActive3 = true;
-  var isActive4 = true;
-  var isActive5 = true;
-  var isActive6 = true;
-  var isActive7 = true;
-  var isActive8 = true;
-  var isActive9 = true;
-
   function button1pressed() {
-    if (isActive1) {
+    var isActive = true;
+    if (isActive) {
       array.push(button1number);
-      isActive1 = false;
+      isActive = false;
     }
   }
   function button2pressed() {
-    if (isActive2) {
+    var isActive = true;
+    if (isActive) {
       array.push(button2number);
-      isActive2 = false;
+      isActive = false;
     }
   }
   function button3pressed() {
-    if (isActive3) {
+    var isActive = true;
+    if (isActive) {
       array.push(button3number);
-      isActive3 = false;
+      isActive = false;
     }
   }
   function button4pressed() {
-    if (isActive4) {
+    var isActive = true;
+    if (isActive) {
       array.push(button4number);
-      isActive4 = false;
+      isActive = false;
     }
   }
   function button5pressed() {
-    if (isActive5) {
+    var isActive = true;
+    if (isActive) {
       array.push(button5number);
-      isActive5 = false;
+      isActive = false;
     }
   }
   function button6pressed() {
-    if (isActive6) {
+    var isActive = true;
+    if (isActive) {
       array.push(button6number);
-      isActive6 = false;
+      isActive = false;
     }
   }
   function button7pressed() {
-    if (isActive7) {
+    var isActive = true;
+    if (isActive) {
       array.push(button7number);
-      isActive7 = false;
+      isActive = false;
     }
   }
   function button8pressed() {
-    if (isActive8) {
+    var isActive = true;
+    if (isActive) {
       array.push(button8number);
-      isActive8 = false;
+      isActive = false;
     }
   }
   function button9pressed() {
-    if (isActive9) {
+    var isActive = true;
+    if (isActive) {
       array.push(button9number);
-      isActive9 = false;
+      isActive = false;
     }
   }
 
@@ -104,29 +103,7 @@ function Game3() {
     if (array == selectedRuneArray) {
       //win condition
     } else {
-      //You lose! (lives--)
-    }
-  }
-
-  function resetButton() {
-    array = [];
-    isActive1 = true;
-    isActive2 = true;
-    isActive3 = true;
-    isActive4 = true;
-    isActive5 = true;
-    isActive6 = true;
-    isActive7 = true;
-    isActive8 = true;
-    isActive9 = true;
-  }
-
-  function shuffle(array: number[]) {
-    for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+      //You win! (Show button for next game)
     }
   }
 
