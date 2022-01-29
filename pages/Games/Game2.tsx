@@ -280,86 +280,67 @@ function Gamenick() {
       {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
       {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
       {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
-      <div className="mb-4 border-4 border-gray-600">
-        <div className="border-4 border-gray-600">
-          <div className="mx-auto mt-4 flex w-1/3 items-center justify-center">
-            <p className="cursor-pointer rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="mx-auto h-10 w-10 "
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </p>
-          </div>
-          <div className="flex-col-3  flex items-center justify-center p-4">
-            <div className="">
-              <p className="mr-4  cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </p>
+      <div className="border-4 border-gray-600">
+        <div className="mx-auto flex items-center justify-center">
+          <p className="mx-auto cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="mx-auto h-10 w-10 "
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </p>
+        </div>
+
+        <div className="mx-auto flex items-center justify-center pt-4">
+          <p className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </p>
+          <div className="width-600px height-600px border-2 border-gray-600 py-2 ">
+            <div className="row-auto flex">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+              <p>4</p>
             </div>
-            <div className="width-600px height-600px border-4 border-gray-600 pt-2">
-              <div className="row-auto flex">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-              </div>
-              <div className="flex">
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
-              </div>
-              <div className="flex">
-                <div>9</div>
-                <div>10</div>
-                <div>11</div>
-                <div>12</div>
-              </div>
-              <div className="flex">
-                <div>13</div>
-                <div>14</div>
-                <div>15</div>
-                <div>16</div>
-              </div>
+            <div className="flex">
+              <p>5</p>
+              <p>6</p>
+              <p>7</p>
+              <p>8</p>
             </div>
-            <div>
-              <p className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-10 w-10"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </p>
+            <div className="flex">
+              <p>9</p>
+              <p>10</p>
+              <p>11</p>
+              <p>12</p>
+            </div>
+            <div className="flex">
+              <p>13</p>
+              <p>14</p>
+              <p>15</p>
+              <p>16</p>
             </div>
           </div>
-          <div className="mx-auto flex items-center justify-center ">
-            <p className="mb-4 cursor-pointer rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4">
+          <div>
+            <p className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -368,12 +349,28 @@ function Gamenick() {
               >
                 <path
                   fill-rule="evenodd"
-                  d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                   clip-rule="evenodd"
                 />
               </svg>
             </p>
           </div>
+        </div>
+        <div className="mx-auto flex items-center justify-center ">
+          <p className="mb-4 mt-4 cursor-pointer rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </p>
         </div>
       </div>
       <a
