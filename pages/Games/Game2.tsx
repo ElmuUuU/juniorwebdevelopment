@@ -7,6 +7,7 @@ determine what happens when game is won
 */
 
 import { doesNotThrow } from 'assert'
+import { time } from 'console'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -92,15 +93,20 @@ function Gamenick() {
   //Start game and set up board
 
   function initGame() {
-    var image1=document.getElementById("img1") as HTMLImageElement;
-    image1.src=chooseImage(cell[0][0]);
-    var image2=document.getElementById("img2") as HTMLImageElement;
-    image2.src=chooseImage(cell[0][2]);
-    var image3=document.getElementById("img3") as HTMLImageElement;
-    image3.src=chooseImage(cell[0][4]);
-    var image4=document.getElementById("img4") as HTMLImageElement;
-    image4.src=chooseImage(cell[0][6]);
+    var timestamp = new Date().getTime();
+    updateImage(timestamp, "img1", 0, 0);
+    updateImage(timestamp, "img2", 2, 0);
+    updateImage(timestamp, "img3", 4, 0);
+    updateImage(timestamp, "img4", 6, 0);
+    updateImage(timestamp, "img5", 0, 2);
+    updateImage(timestamp, "img6", 2, 2);
+    updateImage(timestamp, "img7", 4, 2);
+    updateImage(timestamp, "img8", 6, 2);
     //draw game field
+  }
+  function updateImage(timestamp: number, img: string, col: number, row: number) {
+   var image = document.getElementById(img) as HTMLImageElement
+   image.src=chooseImage(cell[row][col]) + timestamp;
   }
 
   function setupGame() {
