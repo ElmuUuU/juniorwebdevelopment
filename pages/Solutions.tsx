@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Solutions() {
@@ -60,8 +61,29 @@ function Solutions() {
           </div>
         </div>
       </div>
-      <div className="text-4xl">Game 2:</div>
+      <div className="text-4xl">
+        Game 2:
+        <div>
+          <Image src="/labyrinth1.png" width={300} height={300} />
+          <Image src="/labyrinth2.png" width={300} height={300} />
+        </div>
+        <div>
+          <Image src="/labyrinth3.png" width={300} height={300} />
+          <Image src="/labyrinth4.png" width={300} height={300} />
+        </div>
+        <div>
+          <Image src="/labyrinth5.png" width={300} height={300} />
+        </div>
+      </div>
       <div className="text-4xl">Game 3:</div>
+      <div className="mt-4 mb-4">
+        <a
+          href="/"
+          className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 p-1"
+        >
+          Go back to the starting screen:
+        </a>
+      </div>
     </div>
   )
 }
