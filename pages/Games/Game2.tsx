@@ -264,9 +264,13 @@ function Gamenick() {
       {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
       {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
       <div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>Pfeil nach oben</div>
+        <div>
+          <div>Pfeil nach links</div>
+          <div>Spielbrett</div>
+          <div>Pfeil nach rechts</div>
+        </div>
+        <div>Pfeil nach unten</div>
       </div>
       <a
         href="/Games/Game3"
