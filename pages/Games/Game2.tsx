@@ -42,8 +42,8 @@ function Gamenick() {
   //  Key: 5
   //  Lock: 6
   //  Wall: 10
-  //  Banana: 20
-  //  EiffelTower: 30
+  //  Kompass: 20
+  //  Uhr: 30
   //
 
   function addWall(col: number, row: number) {
@@ -257,6 +257,22 @@ function Gamenick() {
     }
   }
 
+  function chooseImage (cellValue: number) {
+    switch (cellValue) {
+    case 0: 
+    return "leer.png";
+    case 1:
+    return "Hut.png";
+    case 5:
+    return "Schluessel.png";
+    case 6:
+    return "Schloss.png";
+    case 20:
+    return "Kompass.png";
+    case 30:
+    return "Uhr.png";
+    }
+}
   return (
     <div className="mx-auto max-w-7xl">
       {whichGame} + {cell} <br></br>
