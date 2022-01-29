@@ -292,9 +292,9 @@ function Gamenick() {
       {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
       <div className="border-4 border-gray-600">
         <div className="justify-centerpt-4 mx-auto flex items-center">
-          <button
+          <p
             className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick={this.moveY(-2)}
+            onClick={moveY}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -308,26 +308,28 @@ function Gamenick() {
                 clip-rule="evenodd"
               />
             </svg>
-          </button>
+          </p>
         </div>
 
         <div className="mx-auto flex items-center justify-center pt-4">
-          <Link href="/Solutions">
-            <p className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </p>
-          </Link>
+          <button
+            className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4"
+            onClick={moveX(-2)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+
           <div className="width-600px height-600px border-2 border-gray-600 ">
             <div className="row-auto flex">
               <Image src={chooseImage(cell[0][0])} width={50} height={50} />
@@ -355,7 +357,7 @@ function Gamenick() {
             </div>
           </div>
           <div>
-            <p className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
+            <button className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -368,7 +370,7 @@ function Gamenick() {
                   clip-rule="evenodd"
                 />
               </svg>
-            </p>
+            </button>
           </div>
         </div>
         <div className="mx-auto flex items-center justify-center ">
