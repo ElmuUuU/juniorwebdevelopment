@@ -226,8 +226,9 @@ function Gamenick() {
       // game is won
     }
   }
-  function moveX(direction: number) {
+  function moveRight() {
     //collisions with outer walls shall be ignored
+    var direction = 2;
     if (playerX + direction > 7 || playerX + direction < 0) {
     } else {
       if (cell[playerY][playerX + 0.5 * direction] == 10) {
@@ -242,7 +243,42 @@ function Gamenick() {
       }
     }
   }
-  function moveY(direction: number) {
+  function moveLeft() {
+    //collisions with outer walls shall be ignored
+    var direction = -2;
+    if (playerX + direction > 7 || playerX + direction < 0) {
+    } else {
+      if (cell[playerY][playerX + 0.5 * direction] == 10) {
+        //reduce lives
+      } else {
+        cell[playerY][playerX] = holdTyle
+        playerX += direction
+        holdTyle = cell[playerY][playerX]
+        cell[playerY][playerX] = 1
+        victoryConditionCheck()
+        initGame()
+      }
+    }
+  }
+  function moveUp() {
+    //collisions with outer walls shall be ignored
+    var direction = -2;
+    if (playerY + direction > 7 || playerY + direction < 0) {
+    } else {
+      if (cell[playerY + 0.5 * direction][playerX] == 10) {
+        //reduce lives
+      } else {
+        cell[playerY][playerX] = holdTyle
+        playerY += direction
+        holdTyle = cell[playerY][playerX]
+        cell[playerY][playerX] = 1
+        victoryConditionCheck()
+        initGame()
+      }
+    }
+  }
+  function moveDown() {
+    var direction = 2;
     //collisions with outer walls shall be ignored
     if (playerY + direction > 7 || playerY + direction < 0) {
     } else {
@@ -292,9 +328,9 @@ function Gamenick() {
       {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
       <div className="border-4 border-gray-600">
         <div className="justify-centerpt-4 mx-auto flex items-center">
-          <p
+          <button
             className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick={moveY}
+            onClick = { moveY(-2) }
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -308,28 +344,26 @@ function Gamenick() {
                 clip-rule="evenodd"
               />
             </svg>
-          </p>
+          </button>
         </div>
 
         <div className="mx-auto flex items-center justify-center pt-4">
-          <button
-            className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4"
-            onClick={moveX(-2)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-
+          <Link href="/Solutions">
+            <p className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-10 w-10"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </p>
+          </Link>
           <div className="width-600px height-600px border-2 border-gray-600 ">
             <div className="row-auto flex">
               <Image src={chooseImage(cell[0][0])} width={50} height={50} />
@@ -357,7 +391,7 @@ function Gamenick() {
             </div>
           </div>
           <div>
-            <button className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
+            <p className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -370,7 +404,7 @@ function Gamenick() {
                   clip-rule="evenodd"
                 />
               </svg>
-            </button>
+            </p>
           </div>
         </div>
         <div className="mx-auto flex items-center justify-center ">
