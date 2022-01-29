@@ -241,7 +241,7 @@ function Gamenick() {
   }
   function moveRight() {
     //collisions with outer walls shall be ignored
-    var direction = 2;
+    var direction = 2
     if (playerX + direction > 7 || playerX + direction < 0) {
     } else {
       if (cell[playerY][playerX + 0.5 * direction] == 10) {
@@ -258,7 +258,7 @@ function Gamenick() {
   }
   function moveLeft() {
     //collisions with outer walls shall be ignored
-    var direction = -2;
+    var direction = -2
     if (playerX + direction > 7 || playerX + direction < 0) {
     } else {
       if (cell[playerY][playerX + 0.5 * direction] == 10) {
@@ -275,7 +275,7 @@ function Gamenick() {
   }
   function moveUp() {
     //collisions with outer walls shall be ignored
-    var direction = -2;
+    var direction = -2
     if (playerY + direction > 7 || playerY + direction < 0) {
     } else {
       if (cell[playerY + 0.5 * direction][playerX] == 10) {
@@ -291,7 +291,7 @@ function Gamenick() {
     }
   }
   function moveDown() {
-    var direction = 2;
+    var direction = 2
     //collisions with outer walls shall be ignored
     if (playerY + direction > 7 || playerY + direction < 0) {
     } else {
@@ -343,7 +343,7 @@ function Gamenick() {
         <div className="justify-centerpt-4 mx-auto flex items-center">
           <button
             className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick = { moveDown }
+            onClick={moveUp}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -361,34 +361,75 @@ function Gamenick() {
         </div>
 
         <div className="mx-auto flex items-center justify-center pt-4">
-          <Link href="/Solutions">
-            <p className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </p>
-          </Link>
+          <button
+            className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+            onClick={moveLeft}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
           <div className="width-600px height-600px border-2 border-gray-600 ">
             <div className="row-auto flex">
-              <Image id="img1" src={chooseImage(cell[0][0])} width={50} height={50} />
-              <Image id="img2" src={chooseImage(cell[0][2])} width={50} height={50} />
-              <Image id="img3" src={chooseImage(cell[0][4])} width={50} height={50} />
-              <Image id="img4" src={chooseImage(cell[0][6])} width={50} height={50} />
+              <Image
+                id="img1"
+                src={chooseImage(cell[0][0])}
+                width={50}
+                height={50}
+              />
+              <Image
+                id="img2"
+                src={chooseImage(cell[0][2])}
+                width={50}
+                height={50}
+              />
+              <Image
+                id="img3"
+                src={chooseImage(cell[0][4])}
+                width={50}
+                height={50}
+              />
+              <Image
+                id="img4"
+                src={chooseImage(cell[0][6])}
+                width={50}
+                height={50}
+              />
             </div>
             <div className="flex">
-              <Image id="img5" src={chooseImage(cell[2][0])} width={50} height={50} />
-              <Image id="img6" src={chooseImage(cell[2][2])} width={50} height={50} />
-              <Image id="img7" src={chooseImage(cell[2][4])} width={50} height={50} />
-              <Image id="img8" src={chooseImage(cell[2][6])} width={50} height={50} />
+              <Image
+                id="img5"
+                src={chooseImage(cell[2][0])}
+                width={50}
+                height={50}
+              />
+              <Image
+                id="img6"
+                src={chooseImage(cell[2][2])}
+                width={50}
+                height={50}
+              />
+              <Image
+                id="img7"
+                src={chooseImage(cell[2][4])}
+                width={50}
+                height={50}
+              />
+              <Image
+                id="img8"
+                src={chooseImage(cell[2][6])}
+                width={50}
+                height={50}
+              />
             </div>
             <div className="flex">
               <Image src={chooseImage(cell[4][0])} width={50} height={50} />
@@ -404,7 +445,10 @@ function Gamenick() {
             </div>
           </div>
           <div>
-            <p className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
+            <button
+              className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+              onClick={moveRight}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -417,11 +461,14 @@ function Gamenick() {
                   clip-rule="evenodd"
                 />
               </svg>
-            </p>
+            </button>
           </div>
         </div>
         <div className="mx-auto flex items-center justify-center ">
-          <p className="mb-4 mt-4 cursor-pointer rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4">
+          <button
+            className="m-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+            onClick={moveDown}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10"
@@ -434,15 +481,17 @@ function Gamenick() {
                 clip-rule="evenodd"
               />
             </svg>
-          </p>
+          </button>
         </div>
       </div>
-      <a
-        href="/Games/Game3"
-        className="font bold cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-1"
-      >
-        Next Game
-      </a>
+      <div className="mx-auto mt-10 items-center justify-between text-center">
+        <a
+          href="/Games/Game3"
+          className="font bold cursor-pointer items-center rounded-2xl border-2 bg-yellow-300 p-2"
+        >
+          Next Game
+        </a>
+      </div>
     </div>
   )
 }
