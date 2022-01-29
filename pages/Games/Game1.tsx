@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 
 function Games() {
-  let solutionsMap = new Map<string, string>([
+  let inputform = ''
+  const solutionsMap = new Map<string, string>([
     ['1a', 'Palmengarten'],
     ['1b', 'Alte Oper Frankfurt'],
     ['1c', 'Historisches Museum Frankfurt'],
@@ -43,11 +44,7 @@ function Games() {
   solutionString = solutionsMap.get(mapVariation)!
   var previousGame = process.env.PREVIOUS_GAME
 
-  function checkForm() {
-    {
-      /*if gleich, weiter, else -1Leben */
-    }
-  }
+  function checkForm() {}
 
   return (
     <div className="flex w-full flex-col items-center justify-center px-20 pt-20 text-center">
@@ -75,6 +72,7 @@ function Games() {
         <a
           href="/Games/Game2"
           className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
+          //onClick={}
         >
           Bestätigen
         </a>

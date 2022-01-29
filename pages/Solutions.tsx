@@ -73,6 +73,11 @@ function Solutions() {
         <div>
           <Image src="/labyrinth4.png" width={300} height={300} />
           <Image src="/labyrinth5.png" width={300} height={300} />
+          <Image src="/labyrinth6.png" width={300} height={300} />
+        </div>
+        <div>
+          <Image src="/labyrinth7.png" width={300} height={300} />
+          <Image src="/labyrinth8.png" width={300} height={300} />
         </div>
       </div>
       <div className="text-4xl">Game 3:</div>
