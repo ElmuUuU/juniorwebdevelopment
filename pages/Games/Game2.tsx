@@ -7,6 +7,8 @@ determine what happens when game is won
 */
 
 import { doesNotThrow } from 'assert'
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function Gamenick() {
@@ -257,22 +259,30 @@ function Gamenick() {
     }
   }
 
-  function chooseImage (cellValue: number) {
+  var test = ''
+  function chooseImage(cellValue: number) {
     switch (cellValue) {
-    case 0: 
-    return "leer.png";
-    case 1:
-    return "Hut.png";
-    case 5:
-    return "Schluessel.png";
-    case 6:
-    return "Schloss.png";
-    case 20:
-    return "Kompass.png";
-    case 30:
-    return "Uhr.png";
+      case 0:
+        test = '/leer.png'
+        break
+      case 1:
+        test = '/Hut.png'
+        break
+      case 5:
+        test = '/Schluessel.png'
+        break
+      case 6:
+        test = '/Schloss.png'
+        break
+      case 20:
+        test = '/Kompass.png'
+        break
+      case 30:
+        test = '/Uhr.png'
+        break
     }
-}
+    return test
+  }
   return (
     <div className="mx-auto max-w-7xl">
       {whichGame} + {cell} <br></br>
@@ -281,8 +291,11 @@ function Gamenick() {
       {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
       {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
       <div className="border-4 border-gray-600">
-        <div className="mx-auto flex items-center justify-center">
-          <p className="mx-auto cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4">
+        <div className="justify-centerpt-4 mx-auto flex items-center">
+          <button
+            className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+            onClick={this.moveY(-2)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="mx-auto h-10 w-10 "
@@ -295,48 +308,50 @@ function Gamenick() {
                 clip-rule="evenodd"
               />
             </svg>
-          </p>
+          </button>
         </div>
 
         <div className="mx-auto flex items-center justify-center pt-4">
-          <p className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </p>
-          <div className="width-600px height-600px border-2 border-gray-600 py-2 ">
+          <Link href="/Solutions">
+            <p className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 p-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-10 w-10"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </p>
+          </Link>
+          <div className="width-600px height-600px border-2 border-gray-600 ">
             <div className="row-auto flex">
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
+              <Image src={chooseImage(cell[0][0])} width={50} height={50} />
+              <Image src={chooseImage(cell[0][2])} width={50} height={50} />
+              <Image src={chooseImage(cell[0][4])} width={50} height={50} />
+              <Image src={chooseImage(cell[0][6])} width={50} height={50} />
             </div>
             <div className="flex">
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
+              <Image src={chooseImage(cell[2][0])} width={50} height={50} />
+              <Image src={chooseImage(cell[2][2])} width={50} height={50} />
+              <Image src={chooseImage(cell[2][4])} width={50} height={50} />
+              <Image src={chooseImage(cell[2][6])} width={50} height={50} />
             </div>
             <div className="flex">
-              <p>9</p>
-              <p>10</p>
-              <p>11</p>
-              <p>12</p>
+              <Image src={chooseImage(cell[4][0])} width={50} height={50} />
+              <Image src={chooseImage(cell[4][2])} width={50} height={50} />
+              <Image src={chooseImage(cell[4][4])} width={50} height={50} />
+              <Image src={chooseImage(cell[4][6])} width={50} height={50} />
             </div>
             <div className="flex">
-              <p>13</p>
-              <p>14</p>
-              <p>15</p>
-              <p>16</p>
+              <Image src={chooseImage(cell[6][0])} width={50} height={50} />
+              <Image src={chooseImage(cell[6][2])} width={50} height={50} />
+              <Image src={chooseImage(cell[6][4])} width={50} height={50} />
+              <Image src={chooseImage(cell[6][6])} width={50} height={50} />
             </div>
           </div>
           <div>
