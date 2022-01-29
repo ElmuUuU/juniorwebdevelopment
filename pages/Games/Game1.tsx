@@ -2,11 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 
 function Games() {
-  var randomGame = Math.round(Math.random() * (3 - 1) + 1)
-  var game = process.env.GAME_ID
-
-  game = `/Games/Game${randomGame}`
-
   let solutionsMap = new Map<string, string>([
     ['1a', 'test1'],
     ['1b', 'test2'],
@@ -77,6 +72,12 @@ function Games() {
           required
           placeholder="Put the place you think"
         />
+        <a
+          href="/Games/Game2"
+          className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
+        >
+          Bestätigen
+        </a>
         <a
           href="/Games/Game2"
           className="font bold mt-2 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
