@@ -4,7 +4,6 @@ function Game3() {
   var array: number[] = []
 
   var randomRuneArray = Math.round(Math.random() * (10 - 1))
-  randomRuneArray = 0
   var Arrays = new Array()
   Arrays[0] = new Array(4, 7, 8, 3, 10, 5, 11, 13, 2)
   Arrays[1] = new Array(11, 3, 13, 9, 14, 4, 6, 8, 15)
@@ -109,7 +108,45 @@ function Game3() {
 
   return (
     <div>
-      {randomRuneArray} + {selectedRuneArray} + {sortedArray}
+      {selectedRuneArray[0]}
+      <div>
+        <img
+          src={'/' + 'r' + selectedRuneArray[0] + '.png'}
+          onClick={button1pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[1] + '.png'}
+          onClick={button2pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[2] + '.png'}
+          onClick={button3pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[3] + '.png'}
+          onClick={button3pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[4] + '.png'}
+          onClick={button4pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[5] + '.png'}
+          onClick={button5pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[6] + '.png'}
+          onClick={button6pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[7] + '.png'}
+          onClick={button7pressed}
+        />
+        <img
+          src={'/' + 'r' + selectedRuneArray[8] + '.png'}
+          onClick={button8pressed}
+        />
+      </div>
       <a
         href="/Scoreboard"
         className="font bold mt-2 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
@@ -119,4 +156,5 @@ function Game3() {
     </div>
   )
 }
+
 export default Game3
