@@ -347,6 +347,11 @@ function Gamenick() {
     return test
   }
   return (
+    <html>
+      <head>
+        <title>Game2</title>
+      </head>
+      <body>
     <div className="mx-auto max-w-7xl">
       {whichGame} + {cell} <br></br>
       {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
@@ -547,6 +552,8 @@ function Gamenick() {
         </a>
       </div>
     </div>
+    </body>
+    </html>
   )
 }
 
