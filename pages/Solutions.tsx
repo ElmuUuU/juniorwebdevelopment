@@ -20,7 +20,7 @@ function Solutions() {
 
         <script src="./Solutions.tsx"></script>
       </Head>
-      <body>
+      <div>
         <div id="map"></div>
         <script
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXO3QMSRjSC5Pmz3nJKoHGzJaYh6cZl7M&v=weekly"
@@ -83,7 +83,7 @@ function Solutions() {
             Go back to the starting screen:
           </a>
         </div>
-      </body>
+      </div>
     </div>
   )
 }
