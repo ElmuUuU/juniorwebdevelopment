@@ -17,8 +17,8 @@ function Games() {
     ['4b', 'Tokyo Tower'],
     ['4c', 'Hokusai-Museum Sumida'],
     ['5a', 'Opernhaus Sydeny'],
-    ['5b', 'test14'],
-    ['5c', 'test15'],
+    ['5b', 'Sydeny Park'],
+    ['5c', 'Bondi Beach'],
   ])
 
   var randomMap = Math.round(Math.random() * (5 - 1) + 1)
