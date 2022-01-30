@@ -107,6 +107,7 @@ function Games() {
   return (
     <div className="flex w-full flex-col items-center justify-center px-20 pt-20 text-center">
       <p className="pb-4">Use Image No. {mapVariation}</p>
+      <p>Leben: {lives}</p>
       <Image
         src={mapSelection}
         alt=""
@@ -127,6 +128,7 @@ function Games() {
           required
           placeholder="Put the place you think"
         />
+        <button onClick={checkForm}>Lösung überprüfen</button>
         <a
           href="/Games/Game2"
           className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
