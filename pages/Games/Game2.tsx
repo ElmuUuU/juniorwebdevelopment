@@ -128,7 +128,6 @@ function Gamenick() {
   ) {
     var image
     image = document.getElementById(img) as HTMLImageElement
-    console.log(image.src);
     image.src = chooseImage(cell[row][col]) + timestamp
   }
 
