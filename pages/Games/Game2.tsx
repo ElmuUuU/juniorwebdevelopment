@@ -291,6 +291,7 @@ function Gamenick() {
   function moveUp() {
     //collisions with outer walls shall be ignored
     var direction = -2
+    console.log("Fehdasler");
     if (playerY + direction > 7 || playerY + direction < 0) {
     } else {
       if (cell[playerY + 0.5 * direction][playerX] == 10) {
