@@ -62,8 +62,8 @@ function Gamenick() {
   //Generate player location / win condition
 
   function generatePlayer() {
-  var rngy = Math.floor(Math.random() * 4 + 1) * 2 - 2
-  var rngx = Math.floor(Math.random() * 4 + 1) * 2 - 2
+    var rngy = Math.floor(Math.random() * 4 + 1) * 2 - 2
+    var rngx = Math.floor(Math.random() * 4 + 1) * 2 - 2
     if (cell[rngy][rngx] == 0) {
       cell[rngy][rngx] = 1
       playerX = rngx
@@ -93,25 +93,24 @@ function Gamenick() {
 
   //Start game and set up board
 
-  function updateGame() {
-    consoleLog()
-    var timestamp = new Date().getTime();
-    updateImage(timestamp, "img1", 0, 0);
-    updateImage(timestamp, "img2", 2, 0);
-    updateImage(timestamp, "img3", 4, 0);
-    updateImage(timestamp, "img4", 6, 0);
-    updateImage(timestamp, "img5", 0, 2);
-    updateImage(timestamp, "img6", 2, 2);
-    updateImage(timestamp, "img7", 4, 2);
-    updateImage(timestamp, "img8", 6, 2);
-    updateImage(timestamp, "img9", 0, 4);
-    updateImage(timestamp, "img10", 2, 4);
-    updateImage(timestamp, "img11", 4, 4);
-    updateImage(timestamp, "img12", 6, 4);
-    updateImage(timestamp, "img13", 0, 6);
-    updateImage(timestamp, "img14", 2, 6);
-    updateImage(timestamp, "img15", 4, 6);
-    updateImage(timestamp, "img16", 6, 6);
+  function initGame() {
+    var timestamp = new Date().getTime()
+    updateImage(timestamp, 'img1', 0, 0)
+    updateImage(timestamp, 'img2', 2, 0)
+    updateImage(timestamp, 'img3', 4, 0)
+    updateImage(timestamp, 'img4', 6, 0)
+    updateImage(timestamp, 'img5', 0, 2)
+    updateImage(timestamp, 'img6', 2, 2)
+    updateImage(timestamp, 'img7', 4, 2)
+    updateImage(timestamp, 'img8', 6, 2)
+    updateImage(timestamp, 'img9', 0, 4)
+    updateImage(timestamp, 'img10', 2, 4)
+    updateImage(timestamp, 'img11', 4, 4)
+    updateImage(timestamp, 'img12', 6, 4)
+    updateImage(timestamp, 'img13', 0, 6)
+    updateImage(timestamp, 'img14', 2, 6)
+    updateImage(timestamp, 'img15', 4, 6)
+    updateImage(timestamp, 'img16', 6, 6)
     //draw game field
   }
   function updateImage(
@@ -271,7 +270,7 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        updateGame()
+        initGame()
       }
     }
   }
@@ -288,7 +287,7 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        updateGame()
+        initGame()
       }
     }
   }
@@ -305,12 +304,11 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        updateGame()
+        initGame()
       }
     }
   }
   function moveDown() {
-    consoleLog()
     var direction = 2
     console.log(cell[playerY][playerX])
     //collisions with outer walls shall be ignored
@@ -325,17 +323,10 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        updateGame()
-        console.log(cell[playerY][playerX]);
+        initGame()
+        console.log(cell[playerY][playerX])
       }
     }
-  }
-
-  function consoleLog() {
-    console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])
-    console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])
-    console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])
-    console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])
   }
 
   var test = ''
@@ -368,103 +359,35 @@ function Gamenick() {
         <title>Game2</title>
       </head>
       <body>
-    <div className="mx-auto max-w-7xl">
-      {whichGame} + {cell} <br></br>
-      {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
-      {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
-      {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
-      {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
-      <div className="border-4 border-gray-600">
-        <div className="justify-centerpt-4 mx-auto flex items-center">
-          <button
-            className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick={moveUp}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="mx-auto h-10 w-10 "
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div className="mx-auto flex items-center justify-center pt-4">
-          <button
-            className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick={moveLeft}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <div className="width-600px height-600px border-2 border-gray-600 ">
-            <div className="row-auto flex">
-              <Image
-                id="img1"
-                src={chooseImage(cell[0][0])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img2"
-                src={chooseImage(cell[0][2])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img3"
-                src={chooseImage(cell[0][4])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img4"
-                src={chooseImage(cell[0][6])}
-                width={50}
-                height={50}
-              />
-            </div>
-            <div className="flex">
-              <Image
-                id="img5"
-                src={chooseImage(cell[2][0])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img6"
-                src={chooseImage(cell[2][2])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img7"
-                src={chooseImage(cell[2][4])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img8"
-                src={chooseImage(cell[2][6])}
-                width={50}
-                height={50}
-              />
+        <div className="mx-auto max-w-7xl">
+          {whichGame} + {cell} <br></br>
+          {console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])}
+          {console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])}
+          {console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])}
+          {console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])}
+          {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
+          {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
+          {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
+          {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
+          <div className="border-4 border-gray-600">
+            <div className="justify-centerpt-4 mx-auto flex items-center">
+              <button
+                className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+                onClick={moveUp}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="mx-auto h-10 w-10 "
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
             </div>
 
             <div className="mx-auto flex items-center justify-center pt-4">
