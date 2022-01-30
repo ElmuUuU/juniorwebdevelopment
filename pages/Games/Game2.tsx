@@ -94,156 +94,160 @@ function Gamenick() {
   //Start game and set up board
 
   function initGame() {
-    var timestamp = new Date().getTime();
-    updateImage(timestamp, "img1", 0, 0);
-    updateImage(timestamp, "img2", 2, 0);
-    updateImage(timestamp, "img3", 4, 0);
-    updateImage(timestamp, "img4", 6, 0);
-    updateImage(timestamp, "img5", 0, 2);
-    updateImage(timestamp, "img6", 2, 2);
-    updateImage(timestamp, "img7", 4, 2);
-    updateImage(timestamp, "img8", 6, 2);
-    updateImage(timestamp, "img9", 0, 4);
-    updateImage(timestamp, "img10", 2, 4);
-    updateImage(timestamp, "img11", 4, 4);
-    updateImage(timestamp, "img12", 6, 4);
-    updateImage(timestamp, "img13", 0, 6);
-    updateImage(timestamp, "img14", 2, 6);
-    updateImage(timestamp, "img15", 4, 6);
-    updateImage(timestamp, "img16", 6, 6);
+    var timestamp = new Date().getTime()
+    updateImage(timestamp, 'img1', 0, 0)
+    updateImage(timestamp, 'img2', 2, 0)
+    updateImage(timestamp, 'img3', 4, 0)
+    updateImage(timestamp, 'img4', 6, 0)
+    updateImage(timestamp, 'img5', 0, 2)
+    updateImage(timestamp, 'img6', 2, 2)
+    updateImage(timestamp, 'img7', 4, 2)
+    updateImage(timestamp, 'img8', 6, 2)
+    updateImage(timestamp, 'img9', 0, 4)
+    updateImage(timestamp, 'img10', 2, 4)
+    updateImage(timestamp, 'img11', 4, 4)
+    updateImage(timestamp, 'img12', 6, 4)
+    updateImage(timestamp, 'img13', 0, 6)
+    updateImage(timestamp, 'img14', 2, 6)
+    updateImage(timestamp, 'img15', 4, 6)
+    updateImage(timestamp, 'img16', 6, 6)
     //draw game field
   }
-  function updateImage(timestamp: number, img: string, col: number, row: number) {
-    var image;
-    image = document.getElementById(img) as HTMLImageElement;
-    image.src=chooseImage(cell[row][col]) + timestamp;
-   
+  function updateImage(
+    timestamp: number,
+    img: string,
+    col: number,
+    row: number
+  ) {
+    var image
+    image = document.getElementById(img) as HTMLImageElement
+    image.src = chooseImage(cell[row][col]) + timestamp
   }
 
   function setupGame() {
     // randomly select one set up, and set game accordingly
-    if (gameSetUp==false) {
-    var x = Math.floor(Math.random() * 8 + 1)
-    whichGame = x
-    switch (x) {
-      case 1: {
-        addWall(0, 1)
-        addWall(4, 1)
-        addWall(6, 1)
-        addWall(0, 3)
-        addWall(2, 3)
-        addWall(6, 3)
-        addWall(6, 5)
-        addWall(1, 6)
-        addWall(3, 6)
-        addBanana(2, 4)
-        addEiffelTower(4, 2)
-        break
+    if (gameSetUp == false) {
+      var x = Math.floor(Math.random() * 8 + 1)
+      whichGame = x
+      switch (x) {
+        case 1: {
+          addWall(0, 1)
+          addWall(4, 1)
+          addWall(6, 1)
+          addWall(0, 3)
+          addWall(2, 3)
+          addWall(6, 3)
+          addWall(6, 5)
+          addWall(1, 6)
+          addWall(3, 6)
+          addBanana(2, 4)
+          addEiffelTower(4, 2)
+          break
+        }
+        case 2: {
+          addWall(0, 1)
+          addWall(2, 1)
+          addWall(2, 3)
+          addWall(2, 5)
+          addWall(5, 0)
+          addWall(5, 2)
+          addWall(5, 4)
+          addWall(3, 2)
+          addWall(1, 4)
+          addBanana(0, 6)
+          addEiffelTower(4, 2)
+          break
+        }
+        case 3: {
+          addWall(1, 0)
+          addWall(1, 2)
+          addWall(4, 1)
+          addWall(6, 1)
+          addWall(0, 5)
+          addWall(2, 5)
+          addWall(3, 4)
+          addWall(5, 4)
+          addWall(5, 6)
+          addBanana(0, 2)
+          addEiffelTower(4, 6)
+          break
+        }
+        case 4: {
+          addWall(1, 0)
+          addWall(1, 2)
+          addWall(1, 6)
+          addWall(3, 0)
+          addWall(5, 2)
+          addWall(2, 3)
+          addWall(4, 3)
+          addWall(2, 5)
+          addWall(6, 5)
+          addBanana(0, 2)
+          addEiffelTower(4, 6)
+          break
+        }
+        case 5: {
+          addWall(1, 0)
+          addWall(3, 0)
+          addWall(5, 0)
+          addWall(1, 2)
+          addWall(3, 4)
+          addWall(6, 3)
+          addWall(6, 5)
+          addWall(0, 5)
+          addWall(2, 5)
+          addBanana(0, 0)
+          addEiffelTower(4, 4)
+          break
+        }
+        case 6: {
+          addWall(0, 1)
+          addWall(3, 0)
+          addWall(5, 0)
+          addWall(0, 5)
+          addWall(5, 2)
+          addWall(4, 3)
+          addWall(5, 6)
+          addWall(1, 4)
+          addWall(2, 5)
+          addBanana(2, 0)
+          addEiffelTower(4, 2)
+          break
+        }
+        case 7: {
+          addWall(0, 1)
+          addWall(3, 0)
+          addWall(5, 0)
+          addWall(0, 3)
+          addWall(0, 5)
+          addWall(2, 3)
+          addWall(4, 3)
+          addWall(3, 6)
+          addWall(5, 6)
+          addBanana(2, 2)
+          addEiffelTower(2, 6)
+          break
+        }
+        case 8: {
+          addWall(1, 0)
+          addWall(3, 0)
+          addWall(4, 1)
+          addWall(0, 3)
+          addWall(0, 5)
+          addWall(2, 3)
+          addWall(2, 5)
+          addWall(5, 4)
+          addWall(6, 5)
+          addBanana(6, 4)
+          addEiffelTower(0, 4)
+          break
+        }
       }
-      case 2: {
-        addWall(0, 1)
-        addWall(2, 1)
-        addWall(2, 3)
-        addWall(2, 5)
-        addWall(5, 0)
-        addWall(5, 2)
-        addWall(5, 4)
-        addWall(3, 2)
-        addWall(1, 4)
-        addBanana(0, 6)
-        addEiffelTower(4, 2)
-        break
-      }
-      case 3: {
-        addWall(1, 0)
-        addWall(1, 2)
-        addWall(4, 1)
-        addWall(6, 1)
-        addWall(0, 5)
-        addWall(2, 5)
-        addWall(3, 4)
-        addWall(5, 4)
-        addWall(5, 6)
-        addBanana(0, 2)
-        addEiffelTower(4, 6)
-        break
-      }
-      case 4: {
-        addWall(1, 0)
-        addWall(1, 2)
-        addWall(1, 6)
-        addWall(3, 0)
-        addWall(5, 2)
-        addWall(2, 3)
-        addWall(4, 3)
-        addWall(2, 5)
-        addWall(6, 5)
-        addBanana(0, 2)
-        addEiffelTower(4, 6)
-        break
-      }
-      case 5: {
-        addWall(1, 0)
-        addWall(3, 0)
-        addWall(5, 0)
-        addWall(1, 2)
-        addWall(3, 4)
-        addWall(6, 3)
-        addWall(6, 5)
-        addWall(0, 5)
-        addWall(2, 5)
-        addBanana(0, 0)
-        addEiffelTower(4, 4)
-        break
-      }
-      case 6: {
-        addWall(0, 1)
-        addWall(3, 0)
-        addWall(5, 0)
-        addWall(0, 5)
-        addWall(5, 2)
-        addWall(4, 3)
-        addWall(5, 6)
-        addWall(1, 4)
-        addWall(2, 5)
-        addBanana(2, 0)
-        addEiffelTower(4, 2)
-        break
-      }
-      case 7: {
-        addWall(0, 1)
-        addWall(3, 0)
-        addWall(5, 0)
-        addWall(0, 3)
-        addWall(0, 5)
-        addWall(2, 3)
-        addWall(4, 3)
-        addWall(3, 6)
-        addWall(5, 6)
-        addBanana(2, 2)
-        addEiffelTower(2, 6)
-        break
-      }
-      case 8: {
-        addWall(1, 0)
-        addWall(3, 0)
-        addWall(4, 1)
-        addWall(0, 3)
-        addWall(0, 5)
-        addWall(2, 3)
-        addWall(2, 5)
-        addWall(5, 4)
-        addWall(6, 5)
-        addBanana(6, 4)
-        addEiffelTower(0, 4)
-        break
-      }
+      generatePlayer()
+      generateLock()
+      generateKey()
+      gameSetUp = true
     }
-    generatePlayer()
-    generateLock()
-    generateKey()
-    gameSetUp = true
-  }
   }
   function victoryConditionCheck() {
     if (holdTyle == 5) {
@@ -306,21 +310,21 @@ function Gamenick() {
   }
   function moveDown() {
     var direction = 2
-    console.log(cell[playerY][playerX]);
+    console.log(cell[playerY][playerX])
     //collisions with outer walls shall be ignored
     if (playerY + direction > 7 || playerY + direction < 0) {
     } else {
       if (cell[playerY + 0.5 * direction][playerX] == 10) {
         //reduce lives
       } else {
-        console.log(cell[playerY][playerX]);
+        console.log(cell[playerY][playerX])
         cell[playerY][playerX] = holdTyle
         playerY += direction
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
         initGame()
-        console.log(cell[playerY][playerX]);
+        console.log(cell[playerY][playerX])
       }
     }
   }
@@ -355,171 +359,211 @@ function Gamenick() {
         <title>Game2</title>
       </head>
       <body>
-    <div className="mx-auto max-w-7xl">
-      {whichGame} + {cell} <br></br>
-      {console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])}
-      {console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])}
-      {console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])}
-      {console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])}
-      {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
-      {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
-      {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
-      {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
-      <div className="border-4 border-gray-600">
-        <div className="justify-centerpt-4 mx-auto flex items-center">
-          <button
-            className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick={moveUp}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="mx-auto h-10 w-10 "
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div className="mx-auto flex items-center justify-center pt-4">
-          <button
-            className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick={moveLeft}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <div className="width-600px height-600px border-2 border-gray-600 ">
-            <div className="row-auto flex">
-              <Image
-                id="img1"
-                src={chooseImage(cell[0][0])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img2"
-                src={chooseImage(cell[0][2])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img3"
-                src={chooseImage(cell[0][4])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img4"
-                src={chooseImage(cell[0][6])}
-                width={50}
-                height={50}
-              />
-            </div>
-            <div className="flex">
-              <Image
-                id="img5"
-                src={chooseImage(cell[2][0])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img6"
-                src={chooseImage(cell[2][2])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img7"
-                src={chooseImage(cell[2][4])}
-                width={50}
-                height={50}
-              />
-              <Image
-                id="img8"
-                src={chooseImage(cell[2][6])}
-                width={50}
-                height={50}
-              />
-            </div>
-            <div className="flex">
-              <Image id="img9" src={chooseImage(cell[4][0])} width={50} height={50} />
-              <Image id="img10" src={chooseImage(cell[4][2])} width={50} height={50} />
-              <Image id="img11" src={chooseImage(cell[4][4])} width={50} height={50} />
-              <Image id="img12" src={chooseImage(cell[4][6])} width={50} height={50} />
-            </div>
-            <div className="flex">
-              <Image id="img13" src={chooseImage(cell[6][0])} width={50} height={50} />
-              <Image id="img14" src={chooseImage(cell[6][2])} width={50} height={50} />
-              <Image id="img15" src={chooseImage(cell[6][4])} width={50} height={50} />
-              <Image id="img16" src={chooseImage(cell[6][6])} width={50} height={50} />
-            </div>
-          </div>
-          <div>
-            <button
-              className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-              onClick={moveRight}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+        <div className="mx-auto max-w-7xl">
+          {whichGame} + {cell} <br></br>
+          {console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])}
+          {console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])}
+          {console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])}
+          {console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])}
+          {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
+          {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
+          {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
+          {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
+          <div className="border-4 border-gray-600">
+            <div className="justify-centerpt-4 mx-auto flex items-center">
+              <button
+                className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+                onClick={moveUp}
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="mx-auto h-10 w-10 "
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div className="mx-auto flex items-center justify-center pt-4">
+              <button
+                className="mr-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+                onClick={moveLeft}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-10 w-10"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div className="width-600px height-600px border-2 border-gray-600 ">
+                <div className="row-auto flex">
+                  <Image
+                    id="img1"
+                    src={chooseImage(cell[0][0])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img2"
+                    src={chooseImage(cell[0][2])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img3"
+                    src={chooseImage(cell[0][4])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img4"
+                    src={chooseImage(cell[0][6])}
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className="flex">
+                  <Image
+                    id="img5"
+                    src={chooseImage(cell[2][0])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img6"
+                    src={chooseImage(cell[2][2])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img7"
+                    src={chooseImage(cell[2][4])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img8"
+                    src={chooseImage(cell[2][6])}
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className="flex">
+                  <Image
+                    id="img9"
+                    src={chooseImage(cell[4][0])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img10"
+                    src={chooseImage(cell[4][2])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img11"
+                    src={chooseImage(cell[4][4])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img12"
+                    src={chooseImage(cell[4][6])}
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className="flex">
+                  <Image
+                    id="img13"
+                    src={chooseImage(cell[6][0])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img14"
+                    src={chooseImage(cell[6][2])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img15"
+                    src={chooseImage(cell[6][4])}
+                    width={50}
+                    height={50}
+                  />
+                  <Image
+                    id="img16"
+                    src={chooseImage(cell[6][6])}
+                    width={50}
+                    height={50}
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  className="ml-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+                  onClick={moveRight}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-10"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="mx-auto flex items-center justify-center ">
+              <button
+                className="m-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+                onClick={moveDown}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-10 w-10"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="mx-auto mt-10 items-center justify-between text-center">
+            <a
+              href="/Games/Game3"
+              className="font bold cursor-pointer items-center rounded-2xl border-2 bg-yellow-300 p-2"
+            >
+              Next Game
+            </a>
           </div>
         </div>
-        <div className="mx-auto flex items-center justify-center ">
-          <button
-            className="m-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
-            onClick={moveDown}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div className="mx-auto mt-10 items-center justify-between text-center">
-        <a
-          href="/Games/Game3"
-          className="font bold cursor-pointer items-center rounded-2xl border-2 bg-yellow-300 p-2"
-        >
-          Next Game
-        </a>
-      </div>
-    </div>
-    </body>
+      </body>
     </html>
   )
 }
