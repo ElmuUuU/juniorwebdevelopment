@@ -36,6 +36,7 @@ function Gamenick() {
   var whichGame: number = 0
 
   setupGame()
+  initGame()
 
   //Generate Playing field
   //
@@ -102,11 +103,20 @@ function Gamenick() {
     updateImage(timestamp, "img6", 2, 2);
     updateImage(timestamp, "img7", 4, 2);
     updateImage(timestamp, "img8", 6, 2);
+    updateImage(timestamp, "img9", 0, 4);
+    updateImage(timestamp, "img10", 2, 4);
+    updateImage(timestamp, "img11", 4, 4);
+    updateImage(timestamp, "img12", 6, 4);
+    updateImage(timestamp, "img13", 0, 6);
+    updateImage(timestamp, "img14", 2, 6);
+    updateImage(timestamp, "img15", 4, 6);
+    updateImage(timestamp, "img16", 6, 6);
     //draw game field
   }
   function updateImage(timestamp: number, img: string, col: number, row: number) {
    var image = document.getElementById(img) as HTMLImageElement
    image.src=chooseImage(cell[row][col]) + timestamp;
+   
   }
 
   function setupGame() {
@@ -432,16 +442,16 @@ function Gamenick() {
               />
             </div>
             <div className="flex">
-              <Image src={chooseImage(cell[4][0])} width={50} height={50} />
-              <Image src={chooseImage(cell[4][2])} width={50} height={50} />
-              <Image src={chooseImage(cell[4][4])} width={50} height={50} />
-              <Image src={chooseImage(cell[4][6])} width={50} height={50} />
+              <Image id="img9" src={chooseImage(cell[4][0])} width={50} height={50} />
+              <Image id="img10" src={chooseImage(cell[4][2])} width={50} height={50} />
+              <Image id="img11" src={chooseImage(cell[4][4])} width={50} height={50} />
+              <Image id="img12" src={chooseImage(cell[4][6])} width={50} height={50} />
             </div>
             <div className="flex">
-              <Image src={chooseImage(cell[6][0])} width={50} height={50} />
-              <Image src={chooseImage(cell[6][2])} width={50} height={50} />
-              <Image src={chooseImage(cell[6][4])} width={50} height={50} />
-              <Image src={chooseImage(cell[6][6])} width={50} height={50} />
+              <Image id="img13" src={chooseImage(cell[6][0])} width={50} height={50} />
+              <Image id="img14" src={chooseImage(cell[6][2])} width={50} height={50} />
+              <Image id="img15" src={chooseImage(cell[6][4])} width={50} height={50} />
+              <Image id="img16" src={chooseImage(cell[6][6])} width={50} height={50} />
             </div>
           </div>
           <div>
