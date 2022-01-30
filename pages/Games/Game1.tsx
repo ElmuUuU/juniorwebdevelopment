@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 import useState from 'react'
 
-let inputform = ''
 let lives: number = parseInt(process.env.LIVES!)
 console.log(lives)
 const solutionsMap = new Map<string, string>([
