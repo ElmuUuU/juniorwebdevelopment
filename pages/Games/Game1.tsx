@@ -3,8 +3,7 @@ import React from 'react'
 
 let inputform = ''
 let lives: number = parseInt(process.env.LIVES!)
-lives = 3
-
+console.log(lives)
 const solutionsMap = new Map<string, string>([
   ['1a', 'Palmengarten'],
   ['1b', 'Alte Oper Frankfurt'],
@@ -18,8 +17,8 @@ const solutionsMap = new Map<string, string>([
   ['4a', 'Nationalstadion'],
   ['4b', 'Tokyo Tower'],
   ['4c', 'Hokusai-Museum Sumida'],
-  ['5a', 'Opernhaus Sydeny'],
-  ['5b', 'Sydeny Park'],
+  ['5a', 'Opernhaus Sydney'],
+  ['5b', 'Sydney Park'],
   ['5c', 'Bondi Beach'],
 ])
 
@@ -50,55 +49,56 @@ function checkForm() {
   if (process.browser) {
     inputForm = String(document.getElementById('inputValue'))
   }
-  let test = String(inputForm.toLowerCase)
+  console.log(inputForm)
+  let inputString = String(inputForm.toLowerCase)
   if (mapVariation == '1a') {
-    if ((test = 'palmengarten')) {
+    if ((inputString = 'palmengarten')) {
     }
   } else if (mapVariation == '1b') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'alte oper frankfurt')) {
     }
   } else if (mapVariation == '1c') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'historisches museum frankfurt')) {
     }
   } else if (mapVariation == '2a') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'griffith-observatorium')) {
     }
   } else if (mapVariation == '2b') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'dodger stadium')) {
     }
   } else if (mapVariation == '2c') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'los angeles country museum of art')) {
     }
   } else if (mapVariation == '3a') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'dublin zoo')) {
     }
   } else if (mapVariation == '3b') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'sandymount beach')) {
     }
   } else if (mapVariation == '3c') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'mater hospital')) {
     }
   } else if (mapVariation == '4a') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'nationalstadion')) {
     }
   } else if (mapVariation == '4b') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'tokyo tower')) {
     }
   } else if (mapVariation == '4c') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'hokusai-museum sumida')) {
     }
   } else if (mapVariation == '5a') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'opernhaus sydney')) {
     }
   } else if (mapVariation == '5b') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'sydney park')) {
     }
   } else if (mapVariation == '5c') {
-    if ((test = 'alte oper frankfurt')) {
+    if ((inputString = 'bondi beach')) {
     }
   } else {
     lives = lives - 1
-    process.env.LIVES = lives.toLocaleString()
+    process.env.LIVES = lives.toString()
   }
   console.log(lives)
 }
