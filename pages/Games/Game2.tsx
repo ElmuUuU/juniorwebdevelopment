@@ -37,7 +37,6 @@ function Gamenick() {
   var gameSetUp = false
 
   setupGame()
-
   //Generate Playing field
   //
   //  EmptySquare: 0
@@ -361,6 +360,7 @@ function Gamenick() {
     }
     return test
   }
+  
   return (
     <html>
       <head>
@@ -570,6 +570,7 @@ function Gamenick() {
       </body>
     </html>
   )
-}
+ }
+
 
 export default Gamenick
