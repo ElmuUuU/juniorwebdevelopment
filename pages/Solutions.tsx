@@ -20,7 +20,12 @@ function Solutions() {
           <div>
             <h3>Game 1.2 (a,b,c):</h3>
             <div className="mx-auto flex justify-center p-4" id="2">
-              {/* Map einbinden */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100755.57024612394!2d-118.33225732764105!3d34.065665088318916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf61e9d408cb%3A0x73ff07b1c2d6dadc!2sGriffith-Observatorium!5e0!3m2!1sde!2sca!4v1643584571405!5m2!1sde!2sca"
+                width="600"
+                height="450"
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
           <div>
