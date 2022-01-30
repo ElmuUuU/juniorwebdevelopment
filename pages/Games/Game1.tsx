@@ -44,7 +44,24 @@ function Games() {
   solutionString = solutionsMap.get(mapVariation)!
   var previousGame = process.env.PREVIOUS_GAME
 
-  function checkForm() {}
+  function checkForm() {
+    if (mapVariation == '1a') {
+    } else if (mapVariation == '1b') {
+    } else if (mapVariation == '1c') {
+    } else if (mapVariation == '2a') {
+    } else if (mapVariation == '2b') {
+    } else if (mapVariation == '2c') {
+    } else if (mapVariation == '3a') {
+    } else if (mapVariation == '3b') {
+    } else if (mapVariation == '3c') {
+    } else if (mapVariation == '4a') {
+    } else if (mapVariation == '4b') {
+    } else if (mapVariation == '4c') {
+    } else if (mapVariation == '5a') {
+    } else if (mapVariation == '5b') {
+    } else if (mapVariation == '5c') {
+    }
+  }
 
   return (
     <div className="flex w-full flex-col items-center justify-center px-20 pt-20 text-center">
@@ -72,15 +89,9 @@ function Games() {
         <a
           href="/Games/Game2"
           className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
-          //onClick={}
+          onClick={checkForm}
         >
           Bestätigen
-        </a>
-        <a
-          href="/Games/Game2"
-          className="font bold mt-2 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
-        >
-          Next Game
         </a>
       </form>
     </div>
