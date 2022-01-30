@@ -2,37 +2,20 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 
-let map: google.maps.Map
-
-function initMap(): void {
-  map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  })
-}
-
 function Solutions() {
   return (
     <div className="mx-auto max-w-7xl items-center justify-center text-center">
       <Head>
         <title>Simple Map</title>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-        <script src="./Solutions.tsx"></script>
       </Head>
       <div>
-        <div id="map"></div>
-        <script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXO3QMSRjSC5Pmz3nJKoHGzJaYh6cZl7M&v=weekly"
-          async
-          defer
-        ></script>
         <div>
           <h1 className="text-4xl">Game 1:</h1>
           <h2>Scroll down for the next Game</h2>
           <div className="">
             <h3>Game 1.1 (a,b,c):</h3>
-            <div id="frankfurt"></div>
+            <div className="mx-auto flex justify-center p-4" id="2"></div>
+            {/* Map einbinden */}
           </div>
           <div>
             <h3>Game 1.2 (a,b,c):</h3>
