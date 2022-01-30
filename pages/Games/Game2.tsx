@@ -93,7 +93,8 @@ function Gamenick() {
 
   //Start game and set up board
 
-  function initGame() {
+  function updateGame() {
+    consoleLog()
     var timestamp = new Date().getTime()
     updateImage(timestamp, 'img1', 0, 0)
     updateImage(timestamp, 'img2', 2, 0)
@@ -112,6 +113,13 @@ function Gamenick() {
     updateImage(timestamp, 'img15', 4, 6)
     updateImage(timestamp, 'img16', 6, 6)
     //draw game field
+  }
+
+  function consoleLog() {
+    console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])
+    console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])
+    console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])
+    console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])
   }
   function updateImage(
     timestamp: number,
@@ -270,7 +278,7 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        initGame()
+        updateGame()
       }
     }
   }
@@ -287,7 +295,7 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        initGame()
+        updateGame()
       }
     }
   }
@@ -304,7 +312,7 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        initGame()
+        updateGame()
       }
     }
   }
@@ -323,7 +331,7 @@ function Gamenick() {
         holdTyle = cell[playerY][playerX]
         cell[playerY][playerX] = 1
         victoryConditionCheck()
-        initGame()
+        updateGame()
         console.log(cell[playerY][playerX])
       }
     }
@@ -361,10 +369,6 @@ function Gamenick() {
       <body>
         <div className="mx-auto max-w-7xl">
           {whichGame} + {cell} <br></br>
-          {console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])}
-          {console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])}
-          {console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])}
-          {console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])}
           {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
           {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
           {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
