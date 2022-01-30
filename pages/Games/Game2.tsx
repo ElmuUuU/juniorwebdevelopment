@@ -127,8 +127,11 @@ function Gamenick() {
     row: number
   ) {
     var image
+    var imageElement
     image = document.getElementById(img) as HTMLImageElement
-    image.src = chooseImage(cell[row][col]) + timestamp
+     imageElement = document.getElementById(img)
+    image.src = chooseImage(cell[row][col]) +  timestamp
+    image.replaceWith(image)
   }
 
   function setupGame() {
@@ -361,7 +364,7 @@ function Gamenick() {
     return test
   }
   
-  return (
+   return (
     <html>
       <head>
         <title>Game2</title>
@@ -569,8 +572,8 @@ function Gamenick() {
         </div>
       </body>
     </html>
-  )
- }
+  ) 
+}
 
 
 export default Gamenick
