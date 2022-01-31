@@ -23,4 +23,11 @@ Then we made some organisation in folders and files. Most importantly we created
 
 
 
-One day, before the project finished, we realised, that we ran out of time. We still had too much to fix and too much to add.
+One day, before the project was due, we realised, that we ran out of time. We still had too much to fix and too much to add. We deemed the project as not fixable anymore, since we discovered many errors, that
+we did not anticipate before. We had made some mistakes in planning, that made it so, that we couldn't recover from those mistakes in the remaining time. 
+
+These are the things, that we learned from failing, that we realised are reasons we failed on, or in other words the things that we have to improve on:
+- We should not haven chosen typescript as our programming language, since in the end we realised, that many things are different in typescript, then in javascript. In our last meeting we concluded, that everybody
+was more proficient in javascript then in typescript.
+- This is partially due to typescript, but we should not have made all the script and html in the same file. Making everything in the same file has resulted in some things not working the way, they could have worked
+and made debugging in general harder then it had to be. 
