@@ -2,9 +2,10 @@ import Image from 'next/image'
 import React from 'react'
 
 function Games() {
-  var checked = ''
+  //Get lives for each game
   var lives: number = 3
-  console.log(lives)
+
+  //create solutions Map
   const solutionsMap = new Map<string, string>([
     ['1a', 'Palmengarten'],
     ['1b', 'Alte Oper Frankfurt'],
@@ -27,6 +28,8 @@ function Games() {
   var mapVariation = ''
   var solutionString: String
   var randomString = Math.round(Math.random() * (3 - 1) + 1)
+
+  //Get the random Map and solution
   switch (randomString) {
     case 1: {
       mapVariation = randomMap.toString() + 'a'
@@ -45,6 +48,7 @@ function Games() {
   const mapSelection = `/m${mapVariation}.png`
   solutionString = solutionsMap.get(mapVariation)!
 
+  //Check the input form, if it is the same as the solution of the picture.
   function checkForm() {
     let inputForm = document.getElementById('inputValue') as HTMLInputElement
     var inputFormString = String(inputForm.value)
@@ -52,24 +56,25 @@ function Games() {
     console.log(inputFormString)
     console.log(solutionString)
     if (inputFormString == solutionString.toLowerCase()) {
-      //document.getElementById('nextGame')!.style.visibility = true
     } else {
       lives = lives - 1
     }
     console.log(lives)
   }
 
+  //Put out the Content and call the functions
   return (
-    <div className="flex w-full flex-col items-center justify-center px-20 pt-20 text-center">
+    <div className="flex w-full flex-col items-center justify-center pt-10 text-center">
       <p className="pb-4">Use Image No. {mapVariation}</p>
       <p>Leben: {lives}</p>
+      {/* Get the Image of the map */}
       <Image
         src={mapSelection}
         alt=""
         width="640px"
         height="360px"
         layout="fixed"
-        className="pt-4"
+        className="rounded-3xl pt-4"
       />
       <form className="flex pt-4" method="POST">
         <label htmlFor="name" className="mt-4">
@@ -83,14 +88,13 @@ function Games() {
           placeholder="Put the place you think"
         />
       </form>
-      <button onClick={checkForm}>Lösung überprüfen</button>
+      <button onClick={checkForm}>Check solution</button>
       <a
-        hidden
         href="/Games/Game2"
-        className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
+        className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 p-2"
         id="nextGame"
       >
-        Bestätigen
+        Next game
       </a>
     </div>
   )

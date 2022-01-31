@@ -330,10 +330,11 @@ function Gamenick() {
         cell[playerY][playerX] = 1
         victoryConditionCheck()
         updateGame()
+        console.log(cell[playerY][playerX])
       }
     }
   }
-  // assigns a Image, depending on the content of the cell
+  // assigns a Image, depending on the value of the cell
   var test = ''
   function chooseImage(cellValue: number) {
     switch (cellValue) {
