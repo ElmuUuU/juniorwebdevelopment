@@ -13,13 +13,7 @@ import Link from 'next/link'
 import React from 'react'
 
 function Gamenick() {
-  var randomGame = Math.round(Math.random() * (3 - 1) + 1)
-  var game = process.env.GAME_ID
-
-  game = `/Games/Game${randomGame}`
-  var previousGame = parseInt(process.env.PREVIOUS_GAME!)
-  var randomString = Math.round(Math.random() * (3 - 1) + 1)
-
+// generates a 7x7 playing field; Icons can only appear on ([EVEN][EVEN]) Squares and Walls can only exist on ([EVEN][ODD]) or ([ODD][EVEN]) Squares.
   var cell: number[][] = [
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
@@ -29,24 +23,26 @@ function Gamenick() {
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
   ]
+  // holds player coordinates
   var playerY: number = 0
   var playerX: number = 0
+  // holds the tile the player is standing on, defaults to 0 (empty Square)
   var holdTyle = 0
+  // hasKey is relevant for the winning condition (Key has to be picked up, before Game can be won)
   var hasKey = false
-  var whichGame: number = 0
+  // makes sure game is set up only once
   var gameSetUp = false
-  var Game = true;
 
   setupGame()
   //Generate Playing field
-  //
+  // (In previous iterations we used a banana and the Eiffeltower)
   //  EmptySquare: 0
   //  Player: 1
   //  Key: 5
   //  Lock: 6
   //  Wall: 10
-  //  Kompass: 20
-  //  Uhr: 30
+  //  Banana/Compass: 20
+  //  Clock/Eiffeltower: 30
   //
 
   function addWall(col: number, row: number) {
@@ -59,7 +55,7 @@ function Gamenick() {
     cell[col][row] = 30
   }
 
-  //Generate player location / win condition
+  //Player, Keys and Lock were placed totally randomly, since every tile could be reached by the design of the labyrinths. No edge cases could exist.
 
   function generatePlayer() {
     var rngy = Math.floor(Math.random() * 4 + 1) * 2 - 2
@@ -91,8 +87,8 @@ function Gamenick() {
     }
   }
 
-  //Start game and set up board
-
+ // This function was supposed to reload the whole board, after the player has moved. However, it did not work. 
+ // It did update the sources of the images correctly, however it did not matter for the graphics. Those had to be reloaded somehow.
   function updateGame() {
     consoleLog()
     var timestamp = new Date().getTime()
@@ -112,7 +108,7 @@ function Gamenick() {
     updateImage(timestamp, 'img14', 2, 6)
     updateImage(timestamp, 'img15', 4, 6)
     updateImage(timestamp, 'img16', 6, 6)
-    //draw game field
+    //either reload every image here
   }
 
   function consoleLog() {
@@ -130,16 +126,15 @@ function Gamenick() {
     var image
     var imageElement
     image = document.getElementById(img) as HTMLImageElement
-     imageElement = document.getElementById(img)
     image.src = chooseImage(cell[row][col]) +  timestamp
-    image.replaceWith(image)
+    // or reload single image here
+    
   }
 
   function setupGame() {
     // randomly select one set up, and set game accordingly
     if (gameSetUp == false) {
       var x = Math.floor(Math.random() * 8 + 1)
-      whichGame = x
       switch (x) {
         case 1: {
           addWall(0, 1)
@@ -335,11 +330,10 @@ function Gamenick() {
         cell[playerY][playerX] = 1
         victoryConditionCheck()
         updateGame()
-        console.log(cell[playerY][playerX])
       }
     }
   }
-
+  // assigns a Image, depending on the content of the cell
   var test = ''
   function chooseImage(cellValue: number) {
     switch (cellValue) {
@@ -364,7 +358,7 @@ function Gamenick() {
     }
     return test
   }
-  while (game) {
+  
    return (
     <html>
       <head>
@@ -372,11 +366,13 @@ function Gamenick() {
       </head>
       <body>
         <div className="mx-auto max-w-7xl">
-          {whichGame} + {cell} <br></br>
+          {/* This was used to debug the output gamefield before we had the graphics
+          {cell} <br></br>
           {cell[0][0]} {cell[0][2]} {cell[0][4]} {cell[0][6]} <br></br>
           {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
           {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
           {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
+          */}
           <div className="border-4 border-gray-600">
             <div className="justify-centerpt-4 mx-auto flex items-center">
               <button
@@ -575,6 +571,6 @@ function Gamenick() {
     </html>
   ) 
 }
-}
+
 
 export default Gamenick
