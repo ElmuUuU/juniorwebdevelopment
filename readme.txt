@@ -71,3 +71,4 @@ started, so that we would've been able to meet earlier and work for longer.
 This makes playing games that rely heavily on random variables impossible since win states differ between the two. The Rune Game for example expects runes that are not even shown to the user.
 We tried for days fixing these problems but due to not being familiar enough with React and our whole project structure, the only thing that would reliably fix our issues would be a whole backend rewrite, for which we didn't have the time.
 - In Game1 we had problems with the disabling and enabling the Next-game button based on the game state. We were not able to find a way to change the visiblity of the html element using typescript.
+- We tried implementing the actual Google Maps API rather than the embedded one, but the typescript implementation led to an internal server error which we couldn't fix.
