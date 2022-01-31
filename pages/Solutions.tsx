@@ -17,7 +17,7 @@ function Solutions() {
   return (
     <div>
       <Head>
-        <title>Simple Map</title>
+        <title>Solutions</title>
       </Head>
       <div className="mx-auto max-w-7xl items-center justify-center text-center">
         <h1 className="mt-4 text-4xl font-bold">Game 1:</h1>
@@ -114,8 +114,7 @@ function Solutions() {
             <Image src="/r13.png" width={50} height={50} />
             <Image src="/r2.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center">
+          <div className="mb-2 mt-2 flex items-center justify-center">
             <h3 className="mr-4 text-3xl">Solution 2:</h3>
             <Image src="/r11.png" width={50} height={50} />
             <Image src="/r3.png" width={50} height={50} />
@@ -127,8 +126,7 @@ function Solutions() {
             <Image src="/r8.png" width={50} height={50} />
             <Image src="/r15.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center">
+          <div className="mb-2 flex items-center justify-center">
             <h3 className="mr-4 text-3xl">Solution 3:</h3>
             <Image src="/r11.png" width={50} height={50} />
             <Image src="/r6.png" width={50} height={50} />
@@ -140,8 +138,7 @@ function Solutions() {
             <Image src="/r2.png" width={50} height={50} />
             <Image src="/r1.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center ">
+          <div className="mb-2 flex items-center justify-center ">
             <h3 className="mr-4 text-3xl">Solution 4:</h3>
             <Image src="/r4.png" width={50} height={50} />
             <Image src="/r7.png" width={50} height={50} />
@@ -153,8 +150,7 @@ function Solutions() {
             <Image src="/r13.png" width={50} height={50} />
             <Image src="/r2.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center ">
+          <div className="mb-2 flex items-center justify-center ">
             <h3 className="mr-4 text-3xl">Solution 5:</h3>
             <Image src="/r4.png" width={50} height={50} />
             <Image src="/r7.png" width={50} height={50} />
@@ -166,8 +162,7 @@ function Solutions() {
             <Image src="/r13.png" width={50} height={50} />
             <Image src="/r2.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center ">
+          <div className="mb-2 flex items-center justify-center ">
             <h3 className="mr-4 text-3xl">Solution 6:</h3>
             <Image src="/r4.png" width={50} height={50} />
             <Image src="/r7.png" width={50} height={50} />
@@ -179,8 +174,7 @@ function Solutions() {
             <Image src="/r13.png" width={50} height={50} />
             <Image src="/r2.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center ">
+          <div className="mb-2 flex items-center justify-center ">
             <h3 className="mr-4 text-3xl">Solution 7:</h3>
             <Image src="/r4.png" width={50} height={50} />
             <Image src="/r7.png" width={50} height={50} />
@@ -192,8 +186,7 @@ function Solutions() {
             <Image src="/r13.png" width={50} height={50} />
             <Image src="/r2.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center ">
+          <div className="mb-2 flex items-center justify-center ">
             <h3 className="mr-4 text-3xl">Solution 8:</h3>
             <Image src="/r4.png" width={50} height={50} />
             <Image src="/r7.png" width={50} height={50} />
@@ -205,8 +198,7 @@ function Solutions() {
             <Image src="/r13.png" width={50} height={50} />
             <Image src="/r2.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
-          <div className="flex items-center justify-center ">
+          <div className="mb-2 flex items-center justify-center ">
             <h3 className="mr-4 text-3xl">Solution 9:</h3>
             <Image src="/r4.png" width={50} height={50} />
             <Image src="/r7.png" width={50} height={50} />
@@ -218,7 +210,6 @@ function Solutions() {
             <Image src="/r13.png" width={50} height={50} />
             <Image src="/r2.png" width={50} height={50} />
           </div>
-          <hr className="m-2 mx-auto max-w-xl" />
           <div className="flex items-center justify-center ">
             <h3 className="mr-4 text-3xl">Solution 10:</h3>
             <Image src="/r4.png" width={50} height={50} />
