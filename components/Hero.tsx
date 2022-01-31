@@ -5,7 +5,7 @@ import React from 'react'
 function Hero() {
   return (
     <div className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-      <h1 className="text-6xl font-bold">Welcome to the cardboard games!</h1>
+      <h1 className="text-6xl font-bold">Welcome to ComIsKey!</h1>
       <Link href="/Games/Game1">
         <p className="font bold mt-10 animate-pulse cursor-pointer rounded-3xl border-2 bg-yellow-300 p-4 pt-2 text-6xl">
           Start the games

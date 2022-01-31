@@ -1,7 +1,7 @@
-Project of Team ThureFabianNick in JuniorWebDev @ XU-University
+Project ComIsKey! of Team ThureFabianNick in JuniorWebDev @ XU-University
 
-We decided early on in the project to create a webgame containing several minigames that is to be played by two players having asymetrical roles. This concept is inspired by
-the game "Keep talking and nobody explodes". Our unique twist to that game is the time based highscore aspect, that is similar to a website like "Human Benchmark". We also came up with
+We decided early on in the project to create a webgame containing several minigames that is to be played by two players having asymetrical roles. A heavy focus was put on forcing the players to talk, becaus communication is key! "ComIsKey!"
+This concept is inspired by the game "Keep talking and nobody explodes". Our unique twist to that game is the time based highscore aspect, that is similar to a website like "Human Benchmark". We also came up with
 original minigames, that had cool concepts.
 One player assumes the role of the coach, who has a webpage with the instructions to the games. He himself does neither play the games himself, nor does he see the player playing them.
 The other player sees the screen with the games, but does not know the instructions of the games, and he does not have some clues, that are randomized in the instructions.
