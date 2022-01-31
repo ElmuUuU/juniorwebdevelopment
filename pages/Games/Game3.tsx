@@ -1,8 +1,10 @@
 import React from 'react'
 
 function Game3() {
-  var array: number[] = []
+  // This empty array stores the users input for later comparison
+  var inputArray: number[] = [] 
 
+  // Possible games are predetermined and their respective arrays are selected
   var randomRuneArray = Math.round(Math.random() * (10 - 1))
   var Arrays = new Array()
   Arrays[0] = new Array(4, 7, 8, 3, 10, 5, 11, 13, 2)
@@ -18,12 +20,14 @@ function Game3() {
 
   var selectedRuneArray: number[] = Arrays[randomRuneArray]
 
+  //This "randomizes" the display of runes in the 3x3 grid, the sortedArray is used fromnow on
   var sortedArray: number[] = []
   for (var i = 0; i < selectedRuneArray.length; i++) {
     sortedArray.push(selectedRuneArray[i])
   }
   sortedArray.sort((n1, n2) => n1 - n2)
 
+  //Each button is assigned a number that it adds to the inputArray upon being pressed
   var button1number = sortedArray[0]
   var button2number = sortedArray[1]
   var button3number = sortedArray[2]
@@ -34,6 +38,7 @@ function Game3() {
   var button8number = sortedArray[7]
   var button9number = sortedArray[8]
 
+  //The active state of each button is tracked, inhibiting double pressing one
   var isActive1 = true
   var isActive2 = true
   var isActive3 = true
@@ -44,69 +49,71 @@ function Game3() {
   var isActive8 = true
   var isActive9 = true
 
+  //When a button is pressed, it is deactivated and the assigned number is pushed into the array
   function button1pressed() {
     if (isActive1) {
-      array.push(button1number)
+      inputArray.push(button1number)
       isActive1 = false
     }
   }
   function button2pressed() {
     if (isActive2) {
-      array.push(button2number)
+      inputArray.push(button2number)
       isActive2 = false
     }
   }
   function button3pressed() {
     if (isActive3) {
-      array.push(button3number)
+      inputArray.push(button3number)
       isActive3 = false
     }
   }
   function button4pressed() {
     if (isActive4) {
-      array.push(button4number)
+      inputArray.push(button4number)
       isActive4 = false
     }
   }
   function button5pressed() {
     if (isActive5) {
-      array.push(button5number)
+      inputArray.push(button5number)
       isActive5 = false
     }
   }
   function button6pressed() {
     if (isActive6) {
-      array.push(button6number)
+      inputArray.push(button6number)
       isActive6 = false
     }
   }
   function button7pressed() {
     if (isActive7) {
-      array.push(button7number)
+      inputArray.push(button7number)
       isActive7 = false
     }
   }
   function button8pressed() {
     if (isActive8) {
-      array.push(button8number)
+      inputArray.push(button8number)
       isActive8 = false
     }
   }
   function button9pressed() {
     if (isActive9) {
-      array.push(button9number)
+      inputArray.push(button9number)
       isActive9 = false
     }
   }
 
   function checkButton() {
-    if (array == selectedRuneArray) {
+    if (inputArray == selectedRuneArray) {
       //win condition
     } else {
       //You win! (Show button for next game)
     }
   }
 
+  //The reset button reactivates all of the buttons and empties the input array
   function resetButton() {
     var isActive1 = true
     var isActive2 = true
@@ -118,12 +125,13 @@ function Game3() {
     var isActive8 = true
     var isActive9 = true
 
-    array = []
+    inputArray = []
   }
 
+  //
   return (
     <div className="maw-w-7xl mx-auto items-center justify-center text-center">
-      <div className="mx-auto pt-4">
+      <div className="mx-auto pt-4"> {/* Row one Rune display*/}
         <button>
           <img
             src={'/' + 'r' + sortedArray[0] + '.png'}
@@ -143,7 +151,7 @@ function Game3() {
           />
         </button>
       </div>
-      <div className="mx-auto">
+      <div className="mx-auto"> {/*Row two Rune display t*/}
         <button>
           <img
             src={'/' + 'r' + sortedArray[3] + '.png'}
@@ -163,7 +171,7 @@ function Game3() {
           />
         </button>
       </div>
-      <div className="mx-auto">
+      <div className="mx-auto"> {/* Row three Rune display*/}
         <button>
           <img
             src={'/' + 'r' + sortedArray[6] + '.png'}
