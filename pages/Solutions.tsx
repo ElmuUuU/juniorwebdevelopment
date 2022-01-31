@@ -102,7 +102,7 @@ function Solutions() {
       <div className="mx-auto max-w-7xl items-center justify-center text-center">
         <h1 className="mt-4 text-4xl font-bold">Game 3:</h1>
         <div className="block">
-          <div className="flex items-center justify-center">
+          <div className="mt-4 flex items-center justify-center">
             <h3 className="mr-4 text-3xl">Solution 1:</h3>
             <Image src="/r4.png" width={50} height={50} />
             <Image src="/r7.png" width={50} height={50} />
