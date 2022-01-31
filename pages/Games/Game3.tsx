@@ -109,16 +109,47 @@ function Game3() {
   return (
     <div>
       {selectedRuneArray[0]}
-      <div>
-      <img src={"/"+"r" + selectedRuneArray[0] + ".png"} onClick={button1pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[1] + ".png"} onClick={button2pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[2] + ".png"} onClick={button3pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[3] + ".png"} onClick={button3pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[4] + ".png"} onClick={button4pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[5] + ".png"} onClick={button5pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[6] + ".png"} onClick={button6pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[7] + ".png"} onClick={button7pressed}/>
-      <img src={"/"+"r" + selectedRuneArray[8] + ".png"} onClick={button8pressed}/>
+      <div className="row-auto flex">
+        <img
+          src={'/' + 'r' + sortedArray[0] + '.png'}
+          onClick={button1pressed}
+        />
+        <img
+          src={'/' + 'r' + sortedArray[1] + '.png'}
+          onClick={button2pressed}
+        />
+        <img
+          src={'/' + 'r' + sortedArray[2] + '.png'}
+          onClick={button3pressed}
+        />
+        </div>
+        <div className="flex">
+        <img
+          src={'/' + 'r' + sortedArray[3] + '.png'}
+          onClick={button3pressed}
+        />
+        <img
+          src={'/' + 'r' + sortedArray[4] + '.png'}
+          onClick={button4pressed}
+        />
+        <img
+          src={'/' + 'r' + sortedArray[5] + '.png'}
+          onClick={button5pressed}
+        />
+        </div>
+        <div className="flex">
+        <img
+          src={'/' + 'r' + sortedArray[6] + '.png'}
+          onClick={button6pressed}
+        />
+        <img
+          src={'/' + 'r' + sortedArray[7] + '.png'}
+          onClick={button7pressed}
+        />
+        <img
+          src={'/' + 'r' + sortedArray[8] + '.png'}
+          onClick={button8pressed}
+        />
       </div>
       <a
         href="/Scoreboard"
