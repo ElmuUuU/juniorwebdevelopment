@@ -35,6 +35,7 @@ function Gamenick() {
   var hasKey = false
   var whichGame: number = 0
   var gameSetUp = false
+  var Game = true;
 
   setupGame()
   //Generate Playing field
@@ -363,7 +364,7 @@ function Gamenick() {
     }
     return test
   }
-  
+  while (game) {
    return (
     <html>
       <head>
@@ -574,6 +575,6 @@ function Gamenick() {
     </html>
   ) 
 }
-
+}
 
 export default Gamenick
