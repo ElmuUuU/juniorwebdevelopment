@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import useState from 'react'
 
-let lives: number = parseInt(process.env.LIVES!)
+let lives: number = 3
 console.log(lives)
 const solutionsMap = new Map<string, string>([
   ['1a', 'Palmengarten'],
@@ -45,60 +45,16 @@ const mapSelection = `/m${mapVariation}.png`
 solutionString = solutionsMap.get(mapVariation)!
 
 function checkForm() {
-  let inputForm = ''
+  let inputForm = document.getElementById('inputValue') as HTMLInputElement
+  var inputFormString = ''
   if (process.browser) {
-    inputForm = String(document.getElementById('inputValue'))
+    inputFormString = String(inputForm)
   }
+  inputFormString.toLowerCase()
   console.log(inputForm)
-  let inputString = String(inputForm.toLowerCase)
-  if (mapVariation == '1a') {
-    if ((inputString = 'palmengarten')) {
-    }
-  } else if (mapVariation == '1b') {
-    if ((inputString = 'alte oper frankfurt')) {
-    }
-  } else if (mapVariation == '1c') {
-    if ((inputString = 'historisches museum frankfurt')) {
-    }
-  } else if (mapVariation == '2a') {
-    if ((inputString = 'griffith-observatorium')) {
-    }
-  } else if (mapVariation == '2b') {
-    if ((inputString = 'dodger stadium')) {
-    }
-  } else if (mapVariation == '2c') {
-    if ((inputString = 'los angeles country museum of art')) {
-    }
-  } else if (mapVariation == '3a') {
-    if ((inputString = 'dublin zoo')) {
-    }
-  } else if (mapVariation == '3b') {
-    if ((inputString = 'sandymount beach')) {
-    }
-  } else if (mapVariation == '3c') {
-    if ((inputString = 'mater hospital')) {
-    }
-  } else if (mapVariation == '4a') {
-    if ((inputString = 'nationalstadion')) {
-    }
-  } else if (mapVariation == '4b') {
-    if ((inputString = 'tokyo tower')) {
-    }
-  } else if (mapVariation == '4c') {
-    if ((inputString = 'hokusai-museum sumida')) {
-    }
-  } else if (mapVariation == '5a') {
-    if ((inputString = 'opernhaus sydney')) {
-    }
-  } else if (mapVariation == '5b') {
-    if ((inputString = 'sydney park')) {
-    }
-  } else if (mapVariation == '5c') {
-    if ((inputString = 'bondi beach')) {
-    }
+  if (inputFormString == solutionsMap.get(mapVariation.toLowerCase())) {
   } else {
     lives = lives - 1
-    process.env.LIVES = lives.toString()
   }
   console.log(lives)
 }
