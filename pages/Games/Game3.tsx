@@ -125,46 +125,46 @@ function Game3() {
     <div>
       {selectedRuneArray[0]}
       <div className="row-auto flex">
-        <img
+        <button><img
           src={'/' + 'r' + sortedArray[0] + '.png'}
           onClick={button1pressed}
-        />
-        <img
+        /></button>
+        <button><img
           src={'/' + 'r' + sortedArray[1] + '.png'}
           onClick={button2pressed}
-        />
-        <img
+        /></button>
+        <button><img
           src={'/' + 'r' + sortedArray[2] + '.png'}
           onClick={button3pressed}
-        />
+        /></button>
       </div>
       <div className="flex">
-        <img
+      <button><img
           src={'/' + 'r' + sortedArray[3] + '.png'}
           onClick={button3pressed}
-        />
-        <img
+        /></button>
+        <button><img
           src={'/' + 'r' + sortedArray[4] + '.png'}
           onClick={button4pressed}
-        />
-        <img
+        /></button>
+        <button><img
           src={'/' + 'r' + sortedArray[5] + '.png'}
           onClick={button5pressed}
-        />
+        /></button>
       </div>
       <div className="flex">
-        <img
+      <button><img
           src={'/' + 'r' + sortedArray[6] + '.png'}
           onClick={button6pressed}
-        />
-        <img
+        /></button>
+        <button><img
           src={'/' + 'r' + sortedArray[7] + '.png'}
           onClick={button7pressed}
-        />
-        <img
+        /></button>
+        <button><img
           src={'/' + 'r' + sortedArray[8] + '.png'}
           onClick={button8pressed}
-        />
+        /></button>
       </div>
       <div className="mt-4">
         <a className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2">
