@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 function Games() {
+  var checked = ''
   var lives: number = 3
   console.log(lives)
   const solutionsMap = new Map<string, string>([
@@ -46,16 +47,18 @@ function Games() {
 
   function checkForm() {
     let inputForm = document.getElementById('inputValue') as HTMLInputElement
-    var inputFormString = String(inputForm)
-    inputFormString.toLowerCase()
+    var inputFormString = String(inputForm.value)
+    inputFormString = inputFormString.toLowerCase()
     console.log(inputFormString)
-    console.log(inputForm)
+    console.log(solutionString)
     if (inputFormString == solutionString.toLowerCase()) {
+      //document.getElementById('nextGame')!.style.visibility = true
     } else {
       lives = lives - 1
     }
     console.log(lives)
   }
+
   return (
     <div className="flex w-full flex-col items-center justify-center px-20 pt-20 text-center">
       <p className="pb-4">Use Image No. {mapVariation}</p>
@@ -79,16 +82,16 @@ function Games() {
           required
           placeholder="Put the place you think"
         />
-        <div>{solutionsMap.get(mapVariation)}</div>
-        <button onClick={checkForm}>Lösung überprüfen</button>
-        <a
-          href="/Games/Game2"
-          className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
-          onClick={checkForm}
-        >
-          Bestätigen
-        </a>
       </form>
+      <button onClick={checkForm}>Lösung überprüfen</button>
+      <a
+        hidden
+        href="/Games/Game2"
+        className="font bold mt-2 mr-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
+        id="nextGame"
+      >
+        Bestätigen
+      </a>
     </div>
   )
 }
