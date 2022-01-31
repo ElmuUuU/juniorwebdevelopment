@@ -1,4 +1,5 @@
 Project of Team ThureFabianNick in JuniorWebDev @ XU-University
+
 We decided early on in the project to create a webgame containing several minigames that is to be played by two players having asymetrical roles. This concept is inspired by
 the game "Keep talking and nobody explodes". Our unique twist to that game is the time based highscore aspect, that is similar to a website like "Human Benchmark". We also came up with
 original minigames, that had cool concepts.
@@ -24,7 +25,6 @@ With the way we set up the games, changing variables is really easy and a settin
 After creating this rough concept we proceeded to set up a gitHub-Repository.
 We made the decision to write our project in typescript and use next.js as our frameworks. We chose React as our sub-framework.
 Then we made some organisation in folders and files. Most importantly we created a games folder with the game files, each game being contained in its respective file. 
-
 Since we chose to have one file for every game, we decided on splitting up the games between us. Thure made the logic for games 1 and 3, Nick was responsible for the more complex game 2 while 
 Fabian created and integrated the frontend and visuals.
 
@@ -53,7 +53,6 @@ The logcic we implemented for every game works as follows:
     Additionally, each button state is checked so that ebery button can only be pressed once. When a button is pressed, its value is added to an empty array that can be compared
     to the selected array when the checkArray function is triggered by its button. There is also a reset button that empties the input Array and reenablesall buttons.
     
-
 Ater trying to fix some major mistakes, like React Hydration and client-side rendering of the visual elements, for almost a week, we realised, that we couldn't get major parts of the games to run properly like 
 random game states and some essential visual elements. Altough from our understanding we gave ourselves enough time, those unforseen problems made it so we couldnt finish the web-app in time.
 Fixing those problems would have required a major rewrite of our backend and a restructioring of the whole project, therefore we couldn't recover in the remaining time. 
@@ -71,4 +70,4 @@ started, so that we would've been able to meet earlier and work for longer.
 - For the individual games we also ran into some severe problems. Most importantly React Hydration errors. For some reasons sometimes the server and client would generate random states independantly from each other.
 This makes playing games that rely heavily on random variables impossible since win states differ between the two. The Rune Game for example expects runes that are not even shown to the user.
 We tried for days fixing these problems but due to not being familiar enough with React and our whole project structure, the only thing that would reliably fix our issues would be a whole backend rewrite, for which we didn't have the time.
-- For Game1 we had problems with the visibility of a button. We were not able to find 
+- In Game1 we had problems with the disabling and enabling the Next-game button based on the game state. We were not able to find a way to change the visiblity of the html element using typescript.
