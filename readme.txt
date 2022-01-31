@@ -1,8 +1,8 @@
 Project ComIsKey! of Team ThureFabianNick in JuniorWebDev @ XU-University
 
 We decided early on in the project to create a webgame containing several minigames that is to be played by two players having asymetrical roles. A heavy focus was put on forcing the players to talk, becaus communication is key! "ComIsKey!"
-This concept is inspired by the game "Keep talking and nobody explodes". Our unique twist to that game is the time based highscore aspect, that is similar to a website like "Human Benchmark". We also came up with
-original minigames, that had cool concepts.
+This concept is inspired by the game "Keep talking and nobody explodes". Our unique twist is the time based highscore aspect, 
+that is similar to websites like "Human Benchmark". We also came up with original minigames, that had cool concepts.
 One player assumes the role of the coach, who has a webpage with the instructions to the games. He himself does neither play the games himself, nor does he see the player playing them.
 The other player sees the screen with the games, but does not know the instructions of the games, and he does not have some clues, that are randomized in the instructions.
 For example the player sees a map without labels, and has to find out the name of an indicated location. To do so, he has to communicate with the coach.
@@ -19,7 +19,8 @@ With those games in mind we thought that we had enough variety in terms of basic
 One thing that comes to mind immediatly is the replayability. Since it would be great if people could play the games over and over for some time we included random aspects 
 in every game. This meant different locations and maps in the first game, randomly generated objects in different mazes in the second game and multiple rune-orders for the third game. There should also be a kind
 of "brute force protection", since trying to press all the buttons until the game is won is definetly a strategy that could lead to success without that we deemed to be not fun - and not the intended way of playing
-we decided to make a lives system - a way to track how many mistakes the player has made and to make the run fail, when he accumulates too many mistakes. For now, the player has three attempts for each game, but this could be changed into a global lives meter, with for example 5 lives total.
+we decided to make a lives system - a way to track how many mistakes the player has made and to make the run fail, when he accumulates too many mistakes. For now, the player has three attempts for each game, but this could be 
+changed into a global lives meter, with for example 5 lives total.
 With the way we set up the games, changing variables is really easy and a settings menu (including a difficulty and game length option) could easily be implemented.
 
 After creating this rough concept we proceeded to set up a gitHub-Repository.
@@ -53,9 +54,11 @@ The logcic we implemented for every game works as follows:
     Additionally, each button state is checked so that ebery button can only be pressed once. When a button is pressed, its value is added to an empty array that can be compared
     to the selected array when the checkArray function is triggered by its button. There is also a reset button that empties the input Array and reenablesall buttons.
     
+
 Ater trying to fix some major mistakes, like React Hydration and client-side rendering of the visual elements, for almost a week, we realised, that we couldn't get major parts of the games to run properly like 
 random game states and some essential visual elements. Altough from our understanding we gave ourselves enough time, those unforseen problems made it so we couldnt finish the web-app in time.
 Fixing those problems would have required a major rewrite of our backend and a restructioring of the whole project, therefore we couldn't recover in the remaining time. 
+
 
 These are the things, that we learned from failing, that we realised are reasons we failed on, or in other words the things that we have to improve on:
 
@@ -71,4 +74,4 @@ started, so that we would've been able to meet earlier and work for longer.
 This makes playing games that rely heavily on random variables impossible since win states differ between the two. The Rune Game for example expects runes that are not even shown to the user.
 We tried for days fixing these problems but due to not being familiar enough with React and our whole project structure, the only thing that would reliably fix our issues would be a whole backend rewrite, for which we didn't have the time.
 - In Game1 we had problems with the disabling and enabling the Next-game button based on the game state. We were not able to find a way to change the visiblity of the html element using typescript.
-- We tried implementing the actual Google Maps API rather than the embedded one, but the typescript implementation led to an internal server error which we couldn't fix.
+- We tried implementing the actual Google Maps API rather than the embedded one, but the typescript implementation led to an internal server error which we couldn't fix. Also there were problems with our API key even though it was configured to be open.
