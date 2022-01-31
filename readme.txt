@@ -13,11 +13,11 @@ a labeled map but no locations, that are marked on it. To win this game, the pla
 The catch is, that the player does not see any walls. Knowing the direction the player has to move to is up to the coach, who first has to find out, 
 which of the eight labyrinth set-ups the player is in.
 -The third Game is a combination game. The player has the objective to click a random set-up of runes in a certain order. However, he does not know the order, nor does the coach know,
-which order he has to use.
+which order he has to use. They have both to communicate, which runes are there, and which are missing, so the coach can decide on which order he has to use.
 
 After creating a rough concept we proceeded to set up a gitHub-Repository.
 We made the decision to write our project in typescript and use next.js as our frameworks. We chose React as our sub-framework.
-Then we made some organisation in folders and sites. Most importantly we created a games folder with the game files - the files, that were our most important files. 
+Then we made some organisation in folders and files. Most importantly we created a games folder with the game files - the files, that were our most important files. 
 
 
 
