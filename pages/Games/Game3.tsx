@@ -34,15 +34,15 @@ function Game3() {
   var button8number = sortedArray[7]
   var button9number = sortedArray[8]
 
-  var isActive1 = true;
-  var isActive2 = true;
-  var isActive3 = true;
-  var isActive4 = true;
-  var isActive5 = true;
-  var isActive6 = true;
-  var isActive7 = true;
-  var isActive8 = true;
-  var isActive9 = true;
+  var isActive1 = true
+  var isActive2 = true
+  var isActive3 = true
+  var isActive4 = true
+  var isActive5 = true
+  var isActive6 = true
+  var isActive7 = true
+  var isActive8 = true
+  var isActive9 = true
 
   function button1pressed() {
     if (isActive1) {
@@ -108,17 +108,17 @@ function Game3() {
   }
 
   function resetButton() {
-    var isActive1 = true;
-    var isActive2 = true;
-    var isActive3 = true;
-    var isActive4 = true;
-    var isActive5 = true;
-    var isActive6 = true;
-    var isActive7 = true;
-    var isActive8 = true;
-    var isActive9 = true;
+    var isActive1 = true
+    var isActive2 = true
+    var isActive3 = true
+    var isActive4 = true
+    var isActive5 = true
+    var isActive6 = true
+    var isActive7 = true
+    var isActive8 = true
+    var isActive9 = true
 
-    array = [];
+    array = []
   }
 
   return (
@@ -166,13 +166,15 @@ function Game3() {
           onClick={button8pressed}
         /></button>
       </div>
-      <div>
-        <a>ResetKNOPF!!!</a>
+      <div className="mt-4">
+        <a className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2">
+          ResetKNOPF!!!
+        </a>
       </div>
       <div className="mt-4">
         <a
           href="/Scoreboard"
-          className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
+          className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 p-2"
         >
           Finish your attempt:
         </a>
