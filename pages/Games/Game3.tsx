@@ -107,6 +107,20 @@ function Game3() {
     }
   }
 
+  function resetButton() {
+    var isActive1 = true;
+    var isActive2 = true;
+    var isActive3 = true;
+    var isActive4 = true;
+    var isActive5 = true;
+    var isActive6 = true;
+    var isActive7 = true;
+    var isActive8 = true;
+    var isActive9 = true;
+
+    array = [];
+  }
+
   return (
     <div>
       {selectedRuneArray[0]}
