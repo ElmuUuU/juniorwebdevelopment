@@ -122,8 +122,8 @@ function Game3() {
           src={'/' + 'r' + sortedArray[2] + '.png'}
           onClick={button3pressed}
         />
-        </div>
-        <div className="flex">
+      </div>
+      <div className="flex">
         <img
           src={'/' + 'r' + sortedArray[3] + '.png'}
           onClick={button3pressed}
@@ -136,8 +136,8 @@ function Game3() {
           src={'/' + 'r' + sortedArray[5] + '.png'}
           onClick={button5pressed}
         />
-        </div>
-        <div className="flex">
+      </div>
+      <div className="flex">
         <img
           src={'/' + 'r' + sortedArray[6] + '.png'}
           onClick={button6pressed}
@@ -151,12 +151,17 @@ function Game3() {
           onClick={button8pressed}
         />
       </div>
-      <a
-        href="/Scoreboard"
-        className="font bold mt-2 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
-      >
-        Finish your attempt:
-      </a>
+      <div>
+        <a>ResetKNOPF!!!</a>
+      </div>
+      <div className="mt-4">
+        <a
+          href="/Scoreboard"
+          className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2"
+        >
+          Finish your attempt:
+        </a>
+      </div>
     </div>
   )
 }
