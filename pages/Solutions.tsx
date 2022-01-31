@@ -3,12 +3,23 @@ import Image from 'next/image'
 import React from 'react'
 
 function Solutions() {
+  var Arrays = new Array()
+  Arrays[0] = new Array(4, 7, 8, 3, 10, 5, 11, 13, 2)
+  Arrays[1] = new Array(11, 3, 13, 9, 14, 4, 6, 8, 15)
+  Arrays[2] = new Array(11, 6, 4, 12, 5, 9, 10, 2, 1)
+  Arrays[3] = new Array(7, 10, 9, 3, 2, 6, 12, 13, 11)
+  Arrays[4] = new Array(3, 6, 11, 9, 7, 10, 12, 2, 4)
+  Arrays[5] = new Array(10, 13, 5, 9, 2, 3, 12, 15, 4)
+  Arrays[6] = new Array(1, 14, 11, 7, 2, 6, 10, 9, 12)
+  Arrays[7] = new Array(12, 10, 3, 11, 4, 13, 7, 15, 8)
+  Arrays[8] = new Array(1, 5, 3, 7, 15, 4, 11, 6, 12)
+  Arrays[9] = new Array(12, 9, 14, 7, 11, 5, 3, 10, 15)
   return (
-    <div className="mx-auto max-w-7xl items-center justify-center text-center">
+    <div>
       <Head>
         <title>Simple Map</title>
       </Head>
-      <div>
+      <div className="mx-auto max-w-7xl items-center justify-center text-center">
         <h1 className="mt-4 text-4xl font-bold">Game 1:</h1>
         <h2 className="text-2xl font-semibold">
           Scroll down for the next Game
@@ -71,8 +82,8 @@ function Solutions() {
           </div>
         </div>
       </div>
-      <div className="p-4 text-4xl">
-        Game 2:
+      <div className="mx-auto max-w-7xl items-center justify-center text-center">
+        <h1 className="mt-4 text-4xl font-bold">Game 2:</h1>
         <div className="pt-4">
           <Image src="/labyrinth1.png" width={300} height={300} />
           <Image src="/labyrinth2.png" width={300} height={300} />
@@ -88,13 +99,146 @@ function Solutions() {
           <Image src="/labyrinth8.png" width={300} height={300} />
         </div>
       </div>
-      <div className="text-4xl">Game 3:</div>
-      <div className="mt-4 mb-4">
+      <div className="mx-auto max-w-7xl items-center justify-center text-center">
+        <h1 className="mt-4 text-4xl font-bold">Game 3:</h1>
+        <div className="block">
+          <div className="flex items-center justify-center">
+            <h3 className="mr-4 text-3xl">Solution 1:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center">
+            <h3 className="mr-4 text-3xl">Solution 2:</h3>
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r9.png" width={50} height={50} />
+            <Image src="/r14.png" width={50} height={50} />
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r6.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r15.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center">
+            <h3 className="mr-4 text-3xl">Solution 3:</h3>
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r6.png" width={50} height={50} />
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r12.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r9.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+            <Image src="/r1.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center ">
+            <h3 className="mr-4 text-3xl">Solution 4:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center ">
+            <h3 className="mr-4 text-3xl">Solution 5:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center ">
+            <h3 className="mr-4 text-3xl">Solution 6:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center ">
+            <h3 className="mr-4 text-3xl">Solution 7:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center ">
+            <h3 className="mr-4 text-3xl">Solution 8:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center ">
+            <h3 className="mr-4 text-3xl">Solution 9:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+          <hr className="m-2 mx-auto max-w-xl" />
+          <div className="flex items-center justify-center ">
+            <h3 className="mr-4 text-3xl">Solution 10:</h3>
+            <Image src="/r4.png" width={50} height={50} />
+            <Image src="/r7.png" width={50} height={50} />
+            <Image src="/r8.png" width={50} height={50} />
+            <Image src="/r3.png" width={50} height={50} />
+            <Image src="/r10.png" width={50} height={50} />
+            <Image src="/r5.png" width={50} height={50} />
+            <Image src="/r11.png" width={50} height={50} />
+            <Image src="/r13.png" width={50} height={50} />
+            <Image src="/r2.png" width={50} height={50} />
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto mt-4 mb-4 max-w-7xl text-center">
         <a
           href="/"
-          className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 p-1"
+          className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 p-1 text-3xl"
         >
-          Go back to the starting screen:
+          Go back to the starting screen
         </a>
       </div>
     </div>
