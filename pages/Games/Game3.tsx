@@ -122,61 +122,89 @@ function Game3() {
   }
 
   return (
-    <div>
-      {selectedRuneArray[0]}
-      <div className="row-auto flex">
-        <button><img
-          src={'/' + 'r' + sortedArray[0] + '.png'}
-          onClick={button1pressed}
-        /></button>
-        <button><img
-          src={'/' + 'r' + sortedArray[1] + '.png'}
-          onClick={button2pressed}
-        /></button>
-        <button><img
-          src={'/' + 'r' + sortedArray[2] + '.png'}
-          onClick={button3pressed}
-        /></button>
+    <div className="maw-w-7xl mx-auto items-center justify-center text-center">
+      <div className="mx-auto pt-4">
+        <button>
+          <img
+            src={'/' + 'r' + sortedArray[0] + '.png'}
+            onClick={button1pressed}
+          />
+        </button>
+        <button className="mr-2 ml-2">
+          <img
+            src={'/' + 'r' + sortedArray[1] + '.png'}
+            onClick={button2pressed}
+          />
+        </button>
+        <button>
+          <img
+            src={'/' + 'r' + sortedArray[2] + '.png'}
+            onClick={button3pressed}
+          />
+        </button>
       </div>
-      <div className="flex">
-      <button><img
-          src={'/' + 'r' + sortedArray[3] + '.png'}
-          onClick={button3pressed}
-        /></button>
-        <button><img
-          src={'/' + 'r' + sortedArray[4] + '.png'}
-          onClick={button4pressed}
-        /></button>
-        <button><img
-          src={'/' + 'r' + sortedArray[5] + '.png'}
-          onClick={button5pressed}
-        /></button>
+      <div className="mx-auto">
+        <button>
+          <img
+            src={'/' + 'r' + sortedArray[3] + '.png'}
+            onClick={button3pressed}
+          />
+        </button>
+        <button className="mr-2 ml-2">
+          <img
+            src={'/' + 'r' + sortedArray[4] + '.png'}
+            onClick={button4pressed}
+          />
+        </button>
+        <button>
+          <img
+            src={'/' + 'r' + sortedArray[5] + '.png'}
+            onClick={button5pressed}
+          />
+        </button>
       </div>
-      <div className="flex">
-      <button><img
-          src={'/' + 'r' + sortedArray[6] + '.png'}
-          onClick={button6pressed}
-        /></button>
-        <button><img
-          src={'/' + 'r' + sortedArray[7] + '.png'}
-          onClick={button7pressed}
-        /></button>
-        <button><img
-          src={'/' + 'r' + sortedArray[8] + '.png'}
-          onClick={button8pressed}
-        /></button>
+      <div className="mx-auto">
+        <button>
+          <img
+            src={'/' + 'r' + sortedArray[6] + '.png'}
+            onClick={button6pressed}
+          />
+        </button>
+        <button className="mr-2 ml-2">
+          <img
+            src={'/' + 'r' + sortedArray[7] + '.png'}
+            onClick={button7pressed}
+          />
+        </button>
+        <button>
+          <img
+            src={'/' + 'r' + sortedArray[8] + '.png'}
+            onClick={button8pressed}
+          />
+        </button>
       </div>
       <div className="mt-4">
-        <a className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 px-1 pt-2">
-          ResetKNOPF!!!
-        </a>
+        <button
+          onClick={resetButton}
+          className="font bold m-2 cursor-pointer rounded-2xl border-2 bg-yellow-300 pt-2"
+        >
+          Reset Input
+        </button>
+      </div>
+      <div className="mt-4">
+        <button
+          className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 p-2"
+          onClick={checkButton}
+        >
+          Finish your attempt:
+        </button>
       </div>
       <div className="mt-4">
         <a
-          href="/Scoreboard"
           className="font bold mt-4 cursor-pointer rounded-2xl border-2 bg-yellow-300 p-2"
+          href="/Scoreboard"
         >
-          Finish your attempt:
+          Scoreboard
         </a>
       </div>
     </div>

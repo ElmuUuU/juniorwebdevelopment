@@ -129,8 +129,8 @@ function Gamenick() {
     var image
     var imageElement
     image = document.getElementById(img) as HTMLImageElement
-     imageElement = document.getElementById(img)
-    image.src = chooseImage(cell[row][col]) +  timestamp
+    imageElement = document.getElementById(img)
+    image.src = chooseImage(cell[row][col]) + timestamp
     image.replaceWith(image)
   }
 
@@ -363,8 +363,8 @@ function Gamenick() {
     }
     return test
   }
-  
-   return (
+
+  return (
     <html>
       <head>
         <title>Game2</title>
@@ -376,7 +376,7 @@ function Gamenick() {
           {cell[2][0]} {cell[2][2]} {cell[2][4]} {cell[2][6]} <br></br>
           {cell[4][0]} {cell[4][2]} {cell[4][4]} {cell[4][6]} <br></br>
           {cell[6][0]} {cell[6][2]} {cell[6][4]} {cell[6][6]} <br></br>
-          <div className="border-4 border-gray-600">
+          <div className="rounded-3xl border-4 border-gray-600">
             <div className="justify-centerpt-4 mx-auto flex items-center">
               <button
                 className="mx-auto mt-4 cursor-pointer items-center justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
@@ -543,7 +543,7 @@ function Gamenick() {
             </div>
             <div className="mx-auto flex items-center justify-center ">
               <button
-                className="m-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4"
+                className="m-4 cursor-pointer justify-center rounded-3xl border-4 border-gray-600 bg-yellow-300 p-4 "
                 onClick={moveDown}
               >
                 <svg
@@ -572,8 +572,7 @@ function Gamenick() {
         </div>
       </body>
     </html>
-  ) 
+  )
 }
-
 
 export default Gamenick
