@@ -12,7 +12,7 @@ function Games() {
     ['1c', 'Historisches Museum Frankfurt'],
     ['2a', 'Griffith-Observatorium'],
     ['2b', 'Dodger Stadium'],
-    ['2c', 'Los Angeles Country Museum of Art'],
+    ['2c', 'Los Angeles County Museum of Art'],
     ['3a', 'Dublin Zoo'],
     ['3b', 'Sandymount Beach'],
     ['3c', 'Mater Hospital'],
