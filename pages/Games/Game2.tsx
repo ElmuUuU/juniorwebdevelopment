@@ -44,7 +44,7 @@ function Gamenick() {
   //  Banana/Compass: 20
   //  Clock/Eiffeltower: 30
   //
-
+  // functions to place the different symbols
   function addWall(col: number, row: number) {
     cell[col][row] = 10
   }
@@ -90,7 +90,7 @@ function Gamenick() {
  // This function was supposed to reload the whole board, after the player has moved. However, it did not work. 
  // It did update the sources of the images correctly, however it did not matter for the graphics. Those had to be reloaded somehow.
   function updateGame() {
-    consoleLog()
+    //consoleLog()
     var timestamp = new Date().getTime()
     updateImage(timestamp, 'img1', 0, 0)
     updateImage(timestamp, 'img2', 2, 0)
@@ -110,13 +110,13 @@ function Gamenick() {
     updateImage(timestamp, 'img16', 6, 6)
     //either reload every image here
   }
-
-  function consoleLog() {
-    console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])
-    console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])
-    console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])
-    console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])
-  }
+  // function used solely for debug purposes
+  //  function consoleLog() {
+  //  console.log(cell[0][0], cell[0][2], cell[0][4], cell[0][6])
+  //  console.log(cell[2][0], cell[2][2], cell[2][4], cell[2][6])
+  //  console.log(cell[4][0], cell[4][2], cell[4][4], cell[4][6])
+  //  console.log(cell[6][0], cell[6][2], cell[6][4], cell[6][6])
+  //}
   function updateImage(
     timestamp: number,
     img: string,
@@ -130,7 +130,7 @@ function Gamenick() {
     // or reload single image here
     
   }
-
+ 
   function setupGame() {
     // randomly select one set up, and set game accordingly
     if (gameSetUp == false) {
@@ -255,12 +255,15 @@ function Gamenick() {
       gameSetUp = true
     }
   }
+
+//function, that is used to check, wether the player is on the key field to pick it up and wether he is on the lock field while holding the key, to win
   function victoryConditionCheck() {
     if (holdTyle == 5) {
       hasKey = true
     }
     if (hasKey == true && holdTyle == 6) {
-      // game is won
+      //game is won, button to next game should appear
+      //could not test it, because of missing graphics
     }
   }
   function moveRight() {
@@ -418,104 +421,104 @@ function Gamenick() {
                   <Image
                     id="img1"
                     src={chooseImage(cell[0][0])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img2"
                     src={chooseImage(cell[0][2])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img3"
                     src={chooseImage(cell[0][4])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img4"
                     src={chooseImage(cell[0][6])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                 </div>
                 <div className="flex">
                   <Image
                     id="img5"
                     src={chooseImage(cell[2][0])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img6"
                     src={chooseImage(cell[2][2])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img7"
                     src={chooseImage(cell[2][4])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img8"
                     src={chooseImage(cell[2][6])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                 </div>
                 <div className="flex">
                   <Image
                     id="img9"
                     src={chooseImage(cell[4][0])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img10"
                     src={chooseImage(cell[4][2])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img11"
                     src={chooseImage(cell[4][4])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img12"
                     src={chooseImage(cell[4][6])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                 </div>
                 <div className="flex">
                   <Image
                     id="img13"
                     src={chooseImage(cell[6][0])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img14"
                     src={chooseImage(cell[6][2])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img15"
                     src={chooseImage(cell[6][4])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                   <Image
                     id="img16"
                     src={chooseImage(cell[6][6])}
-                    width={50}
-                    height={50}
+                    width={150}
+                    height={150}
                   />
                 </div>
               </div>
