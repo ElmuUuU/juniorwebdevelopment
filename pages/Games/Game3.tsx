@@ -34,67 +34,68 @@ function Game3() {
   var button8number = sortedArray[7]
   var button9number = sortedArray[8]
 
+  var isActive1 = true;
+  var isActive2 = true;
+  var isActive3 = true;
+  var isActive4 = true;
+  var isActive5 = true;
+  var isActive6 = true;
+  var isActive7 = true;
+  var isActive8 = true;
+  var isActive9 = true;
+
   function button1pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive1) {
       array.push(button1number)
-      isActive = false
+      isActive1 = false
     }
   }
   function button2pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive2) {
       array.push(button2number)
-      isActive = false
+      isActive2 = false
     }
   }
   function button3pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive3) {
       array.push(button3number)
-      isActive = false
+      isActive3 = false
     }
   }
   function button4pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive4) {
       array.push(button4number)
-      isActive = false
+      isActive4 = false
     }
   }
   function button5pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive5) {
       array.push(button5number)
-      isActive = false
+      isActive5 = false
     }
   }
   function button6pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive6) {
       array.push(button6number)
-      isActive = false
+      isActive6 = false
     }
   }
   function button7pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive7) {
       array.push(button7number)
-      isActive = false
+      isActive7 = false
     }
   }
   function button8pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive8) {
       array.push(button8number)
-      isActive = false
+      isActive8 = false
     }
   }
   function button9pressed() {
-    var isActive = true
-    if (isActive) {
+    if (isActive9) {
       array.push(button9number)
-      isActive = false
+      isActive9 = false
     }
   }
 
